@@ -1,0 +1,379 @@
+/* Font Declarations */
+
+@font-face {
+  font-family: 'ibm-sans-bold';
+  src: url('../fonts/IBMPlexSans-BoldItalic.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ibm-sans-semi';
+  src: url('../fonts/IBMPlexSans-SemiBold.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ibm-sans';
+  src: url('../fonts/IBMPlexSans-Light.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Box Sizing */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'ibm-sans', serif;
+}
+
+/* Headings */
+
+h1 {
+  font-style: italic;
+}
+
+h2, h3 {
+  font-family: 'ibm-sans-semi', sans-serif;
+}
+
+h2 {
+  margin-bottom: 1.5em;
+}
+
+/* Navigation */
+
+.navbar {
+  font-size: 18px;
+  padding-bottom: 10px;
+  z-index: 1000;
+  background-color:transparent;
+  background-size:200px;
+  background-position: bottom;
+  width:100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar.header-active,
+.navbar:hover {
+  background-color: rgba(255,255,255,.9);
+  position: fixed;
+  top: 0;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+  margin-left:0;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color:#6222CF;
+}
+
+.main-nav li {
+  text-align: left;
+  margin: 15px auto;
+  padding: 0 1em;
+}
+
+.logo {
+  color: transparent;
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+/* Buttons */
+
+.head-button {
+  font-family: 'ibm-sans', sans-serif;
+  font-weight: 600;
+  background-color: #6222CF;
+  border: 2px solid white;
+  color: white;
+  margin: 0;
+  display: block;
+}
+
+.button:hover, .button:focus {
+  background-color: transparent;
+  border: 2px solid #6222CF;
+  color: #6222CF;
+}
+
+/* Content */
+
+.wrapper {
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content-container {
+  padding: 1.5em 0;
+}
+
+section#about {
+  background-color: #371d95;
+  color:#fff;
+}
+
+section#my-work.content-container h2 {
+  text-align: center;
+}
+
+section.content-container p:last-child {
+  margin-bottom: 0;
+}
+
+#about h2,
+#slideshow h2 {
+  margin-bottom: .5em;
+}
+
+/* Slideshow Styles */
+
+#slideshow {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+}
+
+.slideshow-item:first-of-type {
+  background-color:#6222CF;
+  background: url(../images/profile.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 340px;
+}
+
+.slideshow-item:last-of-type {
+  background-color:#6222CF;
+  background: url(../images/memphis-mini.png);
+  background-size: 400px;
+  background-position: bottom;
+}
+
+.slideshow-title {
+  color:#6222CF;
+  font-family: 'ibm-sans-bold';
+}
+
+.slideshow-subtitle {
+  font-family: 'ibm-sans';
+  margin-top:0;
+}
+
+.slideshow-title, .slideshow-subtitle, .slideshow-text {
+  text-align:left;
+}
+
+.slideshow-link {
+  margin-bottom:.4em;
+}
+
+#about p strong {
+  font-family: 'ibm-sans-semi'
+}
+
+#my-work {
+  background-color:#fefefe;
+}
+
+.work-list-item {
+  border: 2px solid rgba(0,0,0,.05);
+  border-radius: 0px;
+  background-color: white;
+  box-shadow: 2px 2px 25px 1px #EFEFEF;
+}
+
+.work-list-item a {
+  color:#000;
+}
+
+.work-list-item-content {
+  padding:20px;
+}
+
+.work-list-item-content p:last-of-type {
+  margin-bottom:0;
+}
+
+.work-list-container {
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1em;
+}
+
+.contact-container {
+  margin: 0 auto;
+}
+
+.contact-textbox {
+  width: 100%;
+  padding: 1em;
+  border-radius: 2px;
+  border: #fff solid 2px;
+  margin-bottom: 1em;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+#contact {
+  color:#fff;
+  text-align: center;
+}
+
+#contact h2 {
+  text-align: center;
+}
+
+#contact button {
+  background-color: #3FA2F7;
+  border: #3FA2F7 solid 2px;
+  color:#fff;
+  width:100%;
+}
+
+#contact button:hover {
+  background-color: #6222CF;
+  border: #6222CF solid 2px;
+  color: #fff;
+}
+
+#button-normal {
+  padding: 1.25em;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#contact textarea {
+  min-height: 14em;
+}
+
+/* Form Success or Error Styles */
+
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+#form-messages {
+  margin-top:-1em; 
+  margin-bottom:1em;
+}
+
+.sticky-content {
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 80px;
+    align-items: center;
+    width: 100%
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+    font-family: 'ibm-sans-semi'
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  #slideshow div:first-of-type {
+    height:700px;
+  }
+  
+  #slideshow {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav li {
+    text-align: left;
+    margin: 15px auto;
+    padding: 0;
+  }
+
+  .work-list-container {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .contact-textbox {
+    margin-bottom: 1em;
+  }
+
+  #form-messages {
+    margin-top:-2em; 
+  }
+}

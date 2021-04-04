@@ -2570,15 +2570,16 @@ main .hl {
 main .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 430px;
+  min-height: 400px;
   max-width: 100%;
-  margin: 0px auto;
+  margin: 4em auto 6em;
   overflow: hidden;
 }
 @media (max-width: 1040px) {
   main .grid {
     min-height: auto;
     padding: 0 0 0;
+    margin: 0px auto;
   }
 }
 main .grid-item {
@@ -2599,7 +2600,7 @@ main .btn:hover {
 }
 main .text-container {
   justify-content: center;
-  padding: 2em 20px;
+  padding: 0em 20px;
   flex-direction: column;
 }
 @media (max-width: 768px) {

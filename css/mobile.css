@@ -213,8 +213,14 @@ section.content-container p:last-child {
   box-shadow: 2px 2px 25px 1px #EFEFEF;
 }
 
-.work-list-item a {
+.work-list-item  {
   color:#000;
+  max-width: 300px;
+  margin: 20px auto
+}
+
+.work-list-item a img {
+  width: 100% !important;
 }
 
 .work-list-item-content {
@@ -228,7 +234,7 @@ section.content-container p:last-child {
 .work-list-container {
   display: grid;
   display: -ms-grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-row-gap: 1em;
 }
 

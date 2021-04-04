@@ -275,6 +275,10 @@ img.logo-width{
   box-shadow: 2px 2px 25px 1px #EFEFEF;
 }
 
+.work-list-item a img {
+  width: 100%;
+}
+
 /*.work-list-item:hover {
   filter:grayscale(0%); 
   background-color: #dfdfdf;

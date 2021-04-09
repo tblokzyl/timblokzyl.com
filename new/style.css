@@ -2444,7 +2444,6 @@ main .grid {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  min-height: 470px;
   max-width: 100%;
   margin: 0px auto;
   overflow: hidden;
@@ -2516,7 +2515,7 @@ main .image-container {
 }
 
 main .image-container img {
-  max-width: 75%;
+  max-width: 70%;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -2541,8 +2540,8 @@ main .image-container svg {
   bottom: -45%;
   z-index: 0;
   overflow: hidden;
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   right: -7%;
 }
 
@@ -2602,5 +2601,9 @@ main .container p.subtitle {
 main .container a {
   margin: 1.5em 0;
   line-height: 2em;
+}
+
+main .container .grid {
+  min-height: 435px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -59,7 +59,7 @@ code, pre {
 }
 
 .container, .container-lg {
-  max-width: 1040px;
+  max-width: 1200px;
 }
 
 .container-wide, .container-xl {
@@ -590,7 +590,7 @@ code, pre {
   }
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1200px) {
   .lg-cols {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -679,7 +679,7 @@ code, pre {
   }
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1200px) {
   .lg-icon-top {
     padding-left: 0;
   }
@@ -951,7 +951,7 @@ code, pre {
   }
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1200px) {
   .globalNav .rootLink {
     padding: 0 25px;
   }
@@ -2091,7 +2091,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   }
 }
 
-@media (min-width: 1040px) {
+@media (min-width: 1200px) {
   .globalFooterNav .siteNav .column {
     margin-right: 40px;
   }
@@ -2444,13 +2444,13 @@ main .grid {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  min-height: 430px;
+  min-height: 470px;
   max-width: 100%;
   margin: 0px auto;
   overflow: hidden;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1200px) {
   main .grid {
     min-height: auto;
     padding: 0 0 0;
@@ -2578,7 +2578,7 @@ main img {
 }
 
 main .content-container {
-  max-width: 700px;
+  max-width: 950px;
   margin: 0em auto;
   padding: 0 20px;
   line-height: 2em;

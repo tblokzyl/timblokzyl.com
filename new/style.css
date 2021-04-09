@@ -2515,7 +2515,7 @@ main .image-container {
 }
 
 main .image-container img {
-  max-width: 70%;
+  max-width: 67.5%;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -2525,7 +2525,7 @@ main .image-container img {
   z-index: 1;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
-  margin-right: 7.5%;
+  margin-right: 4.25%;
 }
 
 @media (max-width: 768px) {
@@ -2537,12 +2537,10 @@ main .image-container img {
 
 main .image-container svg {
   position: absolute;
-  bottom: -45%;
+  bottom: -55%;
   z-index: 0;
   overflow: hidden;
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
-  right: -7%;
+  right: -20%;
 }
 
 @media (max-width: 768px) {

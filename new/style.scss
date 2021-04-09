@@ -2228,12 +2228,12 @@ h2 {
     margin-top: -48px;
   }
   img {
-    max-width:70%;
+    max-width:67.5%;
     align-items: flex-end;
     justify-content: flex-end;
     z-index: 1;
     transform: scaleX(-1);
-    margin-right: 7.5%;
+    margin-right: 4.25%;
     @media (max-width: 768px) {
       max-width: 50%;
       margin-right: 0%;
@@ -2241,15 +2241,14 @@ h2 {
   }
   svg {
     position: absolute;
-    bottom: -45%;
+    bottom: -55%;
     z-index: 0;
     overflow: hidden;
-    transform: scale(1.15);
-    right: -7%;
+    right: -20%;
     @media (max-width: 768px) {
       transform: scale(.65);
       bottom: -130%;
-      right: -50%;;
+      right: -50%;
     }
   }
 }

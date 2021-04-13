@@ -1,6 +1,36 @@
 /**
  * Header
  */
+
+ var $owl = $('.loop');
+  
+ $owl.owlCarousel({
+     autoplay: true,
+     autoplayHoverPause: true,
+     autoplayTimeout: 3000,
+     autoplaySpeed: 800,
+     center: true,
+     stagePadding: 15,
+     loop: true,
+     margin: 15,
+     animateOut: 'slide-up',
+     animateIn: 'slide-down',
+     responsive : {
+        0 : {
+            items: 1.4,
+        },
+        480 : {
+            items: 2,
+        },
+        768 : {
+            items: 3
+        },
+        1024 : {
+            items: 4,  
+        }
+     }
+ });
+
 function globalNavDropdowns(e) {
     var t = this;
     this.container = document.querySelector(e), this.root = this.container.querySelector(".navRoot"), this.primaryNav = this.root.querySelector(".navSection.primary"), this.primaryNavItem = this.root.querySelector(".navSection.primary .rootLink:last-child"), this.secondaryNavItem = this.root.querySelector(".navSection.secondary .rootLink:first-child"), this.checkCollision(), window.addEventListener("load", this.checkCollision.bind(this)), window.addEventListener("resize", this.checkCollision.bind(this)), this.container.classList.add("noDropdownTransition"), this.dropdownBackground = this.container.querySelector(".dropdownBackground"), this.dropdownBackgroundAlt = this.container.querySelector(".alternateBackground"), this.dropdownContainer = this.container.querySelector(".dropdownContainer"), this.dropdownArrow = this.container.querySelector(".dropdownArrow"), this.dropdownRoots = Strut.queryArray(".hasDropdown", this.root), this.dropdownSections = Strut.queryArray(".dropdownSection", this.container).map(function(e) {

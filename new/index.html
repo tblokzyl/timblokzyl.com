@@ -7,9 +7,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap"
     rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.green.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css"
+    rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 </head>
 
 <body>
@@ -456,12 +460,40 @@
               transform="translate(100 100)" />
           </svg>
         </div>
-
       </div>
-
     </div>
-    <div class="content-container">
-      <h2 class="full-width tall">A Major Point of Interest</h2>
+    <section class="cards">
+      <div class="owl-wrapper">
+        <div class="loop owl-carousel owl-theme">
+
+          <article class="card">
+            <div class="card__content">
+              <h4 class="card__title"><span>Card One</span></h4>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <h4 class="card__title"><span>Card Two</span></h4>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <h4 class="card__title"><span>Card Three</span></h4>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__content">
+              <h4 class="card__title"><span>Card Four</span></h4>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="content-container">
+      <!--<h2 class="full-width tall">A Major Point of Interest</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in arcu sit amet tellus ultrices maximus.
         Praesent ut lacus sapien. Aliquam id elementum dolor, in sodales nibh. Morbi pellentesque eget nulla in commodo.
         Quisque quam metus, tristique sit amet dolor in, ultrices vehicula tortor. Morbi porta lacus neque, nec
@@ -494,8 +526,8 @@
         metus. Phasellus volutpat auctor sapien, pharetra gravida dolor suscipit ut. Phasellus id malesuada erat.
         Phasellus non lectus eget mi interdum dapibus. Mauris sit amet bibendum dolor. Ut massa urna, blandit cursus
         pulvinar ut, volutpat vehicula augue. Etiam sollicitudin risus et pulvinar lacinia. Aliquam tempor massa nec
-        ipsum luctus cursus. Nunc lobortis velit odio, sed tincidunt tortor iaculis eu. </p>
-    </div>
+        ipsum luctus cursus. Nunc lobortis velit odio, sed tincidunt tortor iaculis eu. </p>-->
+    </section>
   </main>
   <!-- partial -->
   <script src="./script.js"></script>

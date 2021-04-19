@@ -2406,7 +2406,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   /*@media (max-width: 480px) {
     height: 24em;
   }*/
-  padding-bottom: 150%;
+  padding-bottom: 100%;
   margin: 1em 0;
   border-radius: 4px;
   -webkit-transition: opacity 1s ease, -webkit-transform 0.4s 0.5s ease-out;
@@ -2415,6 +2415,12 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   transition: transform 0.4s 0.5s ease-out, opacity 1s ease, -webkit-transform 0.4s 0.5s ease-out;
   /*box-shadow: inset 0 -280px 140px -70px rgba(0,0,0,.75);
   -webkit-box-shadow: inset 0 -280px 140px -70px rgba(0,0,0,.75); */
+}
+
+@media (max-width: 1200px) {
+  .card {
+    padding-bottom: 150%;
+  }
 }
 
 .active .card {
@@ -2516,8 +2522,18 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 }
 
 .owl-stage > div:nth-of-type(4) .card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.75))), url(images/friendship.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75)), url(images/friendship.jpg);
+}
+
+.owl-stage > div:nth-of-type(5) .card {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
   background: linear-gradient(rgba(255, 255, 255, 0), black), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+}
+
+.owl-stage > div:nth-of-type(6) .card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(images/fresh.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), black), url(images/fresh.jpg);
 }
 
 .owl-item .card {

@@ -32,7 +32,10 @@
   /*@media (max-width: 480px) {
     height: 24em;
   }*/
-  padding-bottom: 150%;
+  padding-bottom: 100%;
+  @media(max-width: 1200px) {
+    padding-bottom: 150%;
+  }
   margin: 1em 0;
   border-radius: 4px;
   transition: transform 0.4s 0.5s ease-out, opacity 1s ease;
@@ -116,7 +119,15 @@
 }
 
 .owl-stage > div:nth-of-type(4) .card {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)),   url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, .75)), url(images/friendship.jpg);
+}
+
+.owl-stage > div:nth-of-type(5) .card {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+}
+
+.owl-stage > div:nth-of-type(6) .card {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)),  url(images/fresh.jpg);
 }
 
 .owl-item .card {

@@ -12,7 +12,7 @@
      stagePadding: 20,
      loop: false,
      rewind: true,
-     margin: 24,
+     margin: 40,
      rtl: false,
      animateOut: 'slide-up',
      animateIn: 'slide-down',

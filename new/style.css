@@ -1,3 +1,4 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
 blockquote, body, dd, dl, figure, h1, h2, h3, h4, h5, h6, ol, p, pre, ul {
   margin: 0;
   padding: 0;
@@ -2378,7 +2379,6 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 
 .owl-wrapper {
   position: relative;
-  height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -2387,11 +2387,12 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 
 .cards {
   position: relative;
-  height: 100vh;
   width: 100%;
   padding: 4em 0;
   background-color: #fefefe;
   overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
@@ -2401,24 +2402,24 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 19em;
-  padding: 1em;
+  height: 0;
+  /*@media (max-width: 480px) {
+    height: 24em;
+  }*/
+  padding-bottom: 150%;
   margin: 1em 0;
   border-radius: 4px;
-  opacity: 0.7;
-  -webkit-transform: scale(0.87);
-          transform: scale(0.87);
   -webkit-transition: opacity 1s ease, -webkit-transform 0.4s 0.5s ease-out;
   transition: opacity 1s ease, -webkit-transform 0.4s 0.5s ease-out;
   transition: transform 0.4s 0.5s ease-out, opacity 1s ease;
   transition: transform 0.4s 0.5s ease-out, opacity 1s ease, -webkit-transform 0.4s 0.5s ease-out;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  /*box-shadow: inset 0 -280px 140px -70px rgba(0,0,0,.75);
+  -webkit-box-shadow: inset 0 -280px 140px -70px rgba(0,0,0,.75); */
 }
 
 .active .card {
-  -webkit-box-shadow: 0 0px 1em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0px 1em rgba(0, 0, 0, 0.2);
+  /*box-shadow: inset 0 -280px 140px -70px rgba(0,0,0,.75);
+  -webkit-box-shadow: inset 0 -280px 140px -70px rgba(0,0,0,.75);*/
   -webkit-transform: box-shadow 0.3s ease, transform 0.1s 0.4s ease-in, opacity 0.4s ease;
           transform: box-shadow 0.3s ease, transform 0.1s 0.4s ease-in, opacity 0.4s ease;
 }
@@ -2427,40 +2428,64 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: left;
   color: #fff;
-  opacity: 1;
+  position: absolute;
+  padding: 2em;
+}
+
+.card__content p {
+  margin: 0 !important;
+  line-height: 1.5em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__content a.btn-4 {
+  border-color: #fff;
+  padding: .25em 1em .5em;
+  color: #fff;
+  margin: 1em auto 0em 0 !important;
+  border-radius: 2px;
+  width: auto;
+  max-width: 100%;
 }
 
 .active .card__content {
   opacity: 1;
-  -webkit-transition: opacity 0.4s ease;
-  transition: opacity 0.4s ease;
 }
 
 .card__title {
-  display: inline-block;
-  font-size: 2em;
+  display: block;
+  width: 100%;
+  height: 100;
+  font-size: 1.5em;
+  font-family: 'Poppins';
+  font-weight: 300;
   overflow: hidden;
+  margin: 0em 0 .25em 0;
 }
 
 .card__title span {
   display: inline-block;
-  -webkit-animation: slide-up 0.4s 0s ease both;
-          animation: slide-up 0.4s 0s ease both;
 }
 
 .center.active .card__title span, .center.active.cloned:last-child .card__title span {
   opacity: 1;
-  -webkit-animation: slide-down 0.4s 0.4s ease both;
-          animation: slide-down 0.4s 0.4s ease both;
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s 0.4s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s 0.4s ease;
-  transition: transform 0.3s 0.4s ease, opacity 0.3s ease;
-  transition: transform 0.3s 0.4s ease, opacity 0.3s ease, -webkit-transform 0.3s 0.4s ease;
 }
 
 .center .card {
@@ -2474,20 +2499,30 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
           box-shadow: 0 8px 16px -5px rgba(0, 0, 0, 0.4);
 }
 
-.owl-item:nth-of-type(1n) .card {
-  background-color: #ff527b;
+.owl-stage > div:nth-of-type(1) .card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.75))), url(images/main-hero-mobile.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75)), url(images/main-hero-mobile.jpg);
+  background-position: bottom;
 }
 
-.owl-item:nth-of-type(2n) .card {
-  background-color: #ffcc8f;
+.owl-stage > div:nth-of-type(2) .card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), black), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
 }
 
-.owl-item:nth-of-type(3n) .card {
-  background-color: #ff8f2f;
+.owl-stage > div:nth-of-type(3) .card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), black), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
 }
 
-.owl-item:nth-of-type(4n) .card {
-  background-color: #2480fe;
+.owl-stage > div:nth-of-type(4) .card {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), black), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+}
+
+.owl-item .card {
+  position: relative;
+  background-size: cover !important;
 }
 
 .owl-theme .owl-dots .owl-dot span {
@@ -2507,56 +2542,44 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   background: #ff527b;
 }
 
-@-webkit-keyframes slide-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -120%, 0);
-            transform: translate3d(0, -120%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0%, 0);
-            transform: translate3d(0, 0%, 0);
-  }
+.owl-carousel {
+  margin: 0;
 }
 
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -120%, 0);
-            transform: translate3d(0, -120%, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0%, 0);
-            transform: translate3d(0, 0%, 0);
-  }
+.owl-carousel .owl-nav [class*=owl-] {
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 0;
+  text-align: center;
 }
 
-@-webkit-keyframes slide-up {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0%, 0);
-            transform: translate3d(0, 0%, 0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -120%, 0);
-            transform: translate3d(0, -120%, 0);
-  }
+.owl-carousel .owl-nav [class*=owl-]:hover {
+  background: rgba(0, 0, 0, 0.9);
+  color: #FFF;
 }
 
-@keyframes slide-up {
-  0% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0%, 0);
-            transform: translate3d(0, 0%, 0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -120%, 0);
-            transform: translate3d(0, -120%, 0);
-  }
+.owl-carousel .owl-prev,
+.owl-carousel .owl-next {
+  position: absolute;
+  top: 10px;
+  height: 30px;
+  margin: auto !important;
+}
+
+.owl-carousel .owl-prev {
+  right: 45px;
+}
+
+.owl-carousel .owl-next {
+  right: 10px;
+}
+
+.owl-carousel .owl-dots {
+  display: none !important;
 }
 
 * {
@@ -2565,7 +2588,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 }
 
 body {
-  margin: 0;
+  margin: 0 0 0 auto;
   font-size: 16px;
   overflow-x: hidden;
 }
@@ -2653,19 +2676,57 @@ main .grid-item {
 }
 
 main .btn {
-  padding: .75em 1.25em;
-  font-size: 1em;
-  font-weight: 600;
-  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 1em auto;
+  max-width: 160px;
+  width: 100%;
+  position: relative;
   text-decoration: none;
-  color: #fff;
-  background-color: #000;
-  -webkit-transition: all .3s  ease-in-out;
-  transition: all .3s  ease-in-out;
+  text-align: center;
 }
 
-main .btn:hover {
-  background-color: #ff5722;
+@media (min-width: 600px) {
+  main .btn {
+    margin: 0 1em 1em;
+  }
+  main .btn:hover {
+    text-decoration: none;
+  }
+}
+
+main .btn-4 {
+  border: 1px solid;
+  overflow: hidden;
+  position: relative;
+}
+
+main .btn-4 span {
+  z-index: 20;
+}
+
+main .btn-4:after {
+  background: #ccc;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .2;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+main .btn-4:hover:after {
+  left: 120%;
+  -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 main .text-container {
@@ -2787,8 +2848,9 @@ main .container p.subtitle {
 }
 
 main .container a {
-  margin: 1.5em 0;
-  line-height: 2em;
+  margin: .5em 0 1.5em 0;
+  line-height: 45px;
+  display: block;
 }
 
 main .container .grid {

@@ -7,17 +7,23 @@
  $owl.owlCarousel({
      autoplay: true,
      autoplayHoverPause: true,
-     autoplayTimeout: 3000,
+     autoplayTimeout: 5000,
      autoplaySpeed: 800,
-     center: true,
-     stagePadding: 15,
-     loop: true,
-     margin: 15,
+     stagePadding: 20,
+     loop: false,
+     rewind: true,
+     margin: 24,
+     rtl: false,
      animateOut: 'slide-up',
      animateIn: 'slide-down',
+     nav: true,
+     navText: [
+        "<i class='fa fa-chevron-left'></i>",
+        "<i class='fa fa-chevron-right'></i>"
+      ],
      responsive : {
         0 : {
-            items: 1.4,
+            items: 1.2,
         },
         480 : {
             items: 2,
@@ -26,7 +32,7 @@
             items: 3
         },
         1024 : {
-            items: 4,  
+            items: 3,  
         }
      }
  });

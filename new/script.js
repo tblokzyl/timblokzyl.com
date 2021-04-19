@@ -7,7 +7,6 @@
  $owl.owlCarousel({
      autoplay: true,
      autoplayHoverPause: true,
-     autoplayTimeout: 5000,
      autoplaySpeed: 800,
      stagePadding: 20,
      loop: false,
@@ -24,15 +23,15 @@
      responsive : {
         0 : {
             items: 1.3,
-            margin: 20,
+            margin: 10,
         },
         480 : {
             items: 2,
-            margin: 20,
+            margin: 10,
         },
         768 : {
             items: 3,
-            margin: 20,
+            margin: 10,
         },
         1024 : {
             items: 3,  

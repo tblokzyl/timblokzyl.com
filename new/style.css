@@ -60,7 +60,7 @@ code, pre {
 }
 
 .container, .container-lg {
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .container-wide, .container-xl {
@@ -591,7 +591,7 @@ code, pre {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .lg-cols {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -680,7 +680,7 @@ code, pre {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .lg-icon-top {
     padding-left: 0;
   }
@@ -952,7 +952,7 @@ code, pre {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .globalNav .rootLink {
     padding: 0 25px;
   }
@@ -2092,7 +2092,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .globalFooterNav .siteNav .column {
     margin-right: 40px;
   }
@@ -2391,7 +2391,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   padding: 4em 0;
   background-color: #fefefe;
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -2617,6 +2617,12 @@ main h1 {
   margin: 0em;
 }
 
+@media (min-width: 1200px) {
+  main h1 {
+    font-size: 4em;
+  }
+}
+
 @media (max-width: 1200px) {
   main h1 {
     font-size: 2em;
@@ -2666,7 +2672,7 @@ main .grid {
   overflow: hidden;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   main .grid {
     min-height: auto;
     padding: 0 0 0;
@@ -2851,14 +2857,21 @@ main .container p.subtitle {
   line-height: 1.75em;
 }
 
+@media (min-width: 1024px) {
+  main .container p.subtitle {
+    font-size: 1.25em;
+  }
+}
+
 main .container a {
-  margin: .5em 0 1.5em 0;
-  line-height: 45px;
+  margin: .5em 0 0em 0;
+  line-height: 55px;
   display: block;
+  font-size: 1.25em;
 }
 
 main .container .grid {
-  min-height: 430px;
-  margin-top: 2em;
+  min-height: 498px;
+  margin-top: 4em;
 }
 /*# sourceMappingURL=style.css.map */

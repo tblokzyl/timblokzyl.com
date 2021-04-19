@@ -27,9 +27,12 @@ h1, h2, h3, h4, h5, h6, ol, p {
 h1 { 
   font-family: 'Poppins';     
   font-weight: 500;
+  @media (min-width: 1200px) {
+    font-size: 4em;
+  }
   font-size: 3em;
   margin: 0em;
-  @media (max-width: 1200px) {
+  @media (max-width: 1200px) { 
     font-size: 2em;
   } 
 }  
@@ -65,7 +68,7 @@ h2 {
   max-width: 100%;
   margin: 0px auto;
   overflow: hidden;
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     min-height: auto;
     padding: 0 0 0;
   }
@@ -204,16 +207,20 @@ img {
     line-height:1.5em;
   }
   p.subtitle {
-  line-height: 1.75em;
+    @media (min-width: 1024px) {
+      font-size: 1.25em;
+    }
+    line-height: 1.75em;
   }
   a {
-    margin: .5em 0 1.5em 0;
-    line-height:45px;
+    margin: .5em 0 0em 0;
+    line-height:55px;
     display: block;
+    font-size: 1.25em;
   }
   .grid {
-    min-height: 430px;
-    margin-top: 2em;
+    min-height: 498px;
+    margin-top: 4em;
   }
 } 
 

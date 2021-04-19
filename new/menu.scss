@@ -54,7 +54,7 @@ code, pre {
   width: 100%
 }
 .container, .container-lg {
-  max-width: 1200px
+  max-width: 1400px
 }
 .container-wide, .container-xl {
   max-width: 1160px
@@ -540,7 +540,7 @@ code, pre {
       flex-basis: 50%
   }
 }
-@media (min-width:1200px) {
+@media (min-width:1400px) {
   .lg-cols {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -632,7 +632,7 @@ code, pre {
       top: 7px
   }
 }
-@media (min-width:1200px) {
+@media (min-width:1400px) {
   .lg-icon-top {
       padding-left: 0
   }
@@ -860,7 +860,7 @@ code, pre {
       padding: 0 calc(10px + (100vw - 670px) * .040541)
   }
 }
-@media (min-width:1200px) {
+@media (min-width:1400px) {
   .globalNav .rootLink {
       padding: 0 25px
   }
@@ -1871,7 +1871,7 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
       margin-right: 30px
   }
 }
-@media (min-width:1200px) {
+@media (min-width:1400px) {
   .globalFooterNav .siteNav .column {
       margin-right: 40px
   }

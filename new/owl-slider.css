@@ -17,10 +17,10 @@
 .cards {
   position: relative;
   width: 100%;
-  padding: 4em 0;
+  padding: 6em 0;
   background-color: #fefefe;
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 

@@ -171,11 +171,13 @@
 }
 
 .owl-carousel .owl-prev {
-	right: 45px;
+	left: 10px;
+  top: calc(50% - 30px);
 }
 
 .owl-carousel .owl-next {
 	right: 10px;
+  top: calc(50% - 30px);
 }
 
 .owl-carousel .owl-dots {

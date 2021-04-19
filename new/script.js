@@ -23,13 +23,10 @@
       ],
      responsive : {
         0 : {
-            items: 1.5,
-            autoplay: false,
-            autoplayHoverPause: false,
+            items: 1.3,
         },
         480 : {
-            autoplay: false,
-            autoplayHoverPause: false,
+            items: 2,
         },
         768 : {
             items: 3

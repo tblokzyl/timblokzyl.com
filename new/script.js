@@ -24,9 +24,12 @@
      responsive : {
         0 : {
             items: 1.2,
+            autoplay: false,
+            autoplayHoverPause: false,
         },
         480 : {
-            items: 2,
+            autoplay: false,
+            autoplayHoverPause: false,
         },
         768 : {
             items: 3

@@ -2500,8 +2500,8 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 }
 
 .owl-stage > div:nth-of-type(1) .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.75))), url(images/main-hero-mobile.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75)), url(images/main-hero-mobile.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.75))), url(images/friendship.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75)), url(images/friendship.jpg);
   background-position: bottom;
 }
 

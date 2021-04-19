@@ -2544,6 +2544,8 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 
 .owl-carousel {
   margin: 0;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
 }
 
 .owl-carousel .owl-nav [class*=owl-] {
@@ -2571,11 +2573,13 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 }
 
 .owl-carousel .owl-prev {
-  right: 45px;
+  left: 10px;
+  top: calc(50% - 30px);
 }
 
 .owl-carousel .owl-next {
   right: 10px;
+  top: calc(50% - 30px);
 }
 
 .owl-carousel .owl-dots {

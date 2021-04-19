@@ -24,15 +24,19 @@
      responsive : {
         0 : {
             items: 1.3,
+            margin: 20,
         },
         480 : {
             items: 2,
+            margin: 20,
         },
         768 : {
-            items: 3
+            items: 3,
+            margin: 20,
         },
         1024 : {
             items: 3,  
+            margin: 40,
         }
      }
  });

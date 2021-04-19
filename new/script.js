@@ -23,7 +23,7 @@
       ],
      responsive : {
         0 : {
-            items: 1.2,
+            items: 1.5,
             autoplay: false,
             autoplayHoverPause: false,
         },

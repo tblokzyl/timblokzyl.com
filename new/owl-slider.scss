@@ -142,6 +142,8 @@
 
 .owl-carousel {
 	margin: 0;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
 }
 
 .owl-carousel .owl-nav [class*=owl-] {

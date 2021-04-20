@@ -2383,6 +2383,8 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .cards {
@@ -2393,6 +2395,8 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   overflow: hidden;
   max-width: 1400px;
   margin: 0 auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .card {
@@ -2503,6 +2507,12 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 .center .card:hover {
   -webkit-box-shadow: 0 8px 16px -5px rgba(0, 0, 0, 0.4);
           box-shadow: 0 8px 16px -5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .owl-carousel .owl-stage {
+    padding-left: 20px !important;
+  }
 }
 
 .owl-stage > div:nth-of-type(1) .card {

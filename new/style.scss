@@ -10,7 +10,7 @@ body {
   margin: 0 0 0 auto;
   font-size: 16px;
   overflow-x: hidden;   
-}
+} 
    
 main {
   font-size: 16px; 
@@ -19,12 +19,12 @@ main {
 & > .container {
   padding: 0px;
 } 
-
+ 
 h1, h2, h3, h4, h5, h6, ol, p {
-  margin: 1em 0;
-}
+  margin: 1em 0; 
+}  
 
-h1 { 
+h1 {  
   font-family: 'Poppins';     
   font-weight: 500;
   @media (min-width: 1200px) {

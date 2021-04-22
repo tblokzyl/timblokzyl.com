@@ -858,7 +858,7 @@ code, pre {
 }
 
 .globalNav a:hover {
-  color: #32325d;
+  color: var(--color-gray-dark);
 }
 
 .globalNav > .container-lg {
@@ -971,13 +971,13 @@ code, pre {
 }
 
 .globalNav .colorize {
-  color: #000;
+  color: var(--color-text);
   -webkit-transition: color .1s ease;
   transition: color .1s ease;
 }
 
 .globalNav .colorize.active, .globalNav .colorize:hover {
-  color: #32325d;
+  color: var(--color-gray-dark);
 }
 
 .globalNav .hasDropdown {
@@ -1187,11 +1187,11 @@ code, pre {
 }
 
 .globalNav .linkContainer:hover .linkTitle, .globalNav .linkTitle:hover {
-  color: #32325d;
+  color: var(--color-gray-dark);
 }
 
 .globalNav .linkContainer:hover .linkSub {
-  color: #424770;
+  color: var(--color-gray-light);
 }
 
 .globalNav .hover-fillDark, .globalNav .hover-fillLight {
@@ -2383,20 +2383,15 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
 }
 
 .cards {
   position: relative;
   width: 100%;
   padding: 6em 0;
-  background-color: #fefefe;
   overflow: hidden;
   max-width: 1400px;
   margin: 0 auto;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
 }
 
 .card {
@@ -2509,12 +2504,6 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
           box-shadow: 0 8px 16px -5px rgba(0, 0, 0, 0.4);
 }
 
-@media (max-width: 768px) {
-  .owl-carousel .owl-stage {
-    padding-left: 20px !important;
-  }
-}
-
 .owl-stage > div:nth-of-type(1) .card {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.75))), url(images/friendship.jpg);
   background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75)), url(images/friendship.jpg);
@@ -2612,15 +2601,35 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   display: none !important;
 }
 
+:root {
+  --color-page-background: white;
+  --color-text: #202124;
+  --color-gray-light: rgba(255, 255, 255, 0.5);
+  --color-gray-dark: rgba(32, 33, 36, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-page-background: #202124;
+    --color-text: white;
+    --color-gray-light: rgba(32, 33, 36, 0.5);
+    --color-gray-dark: rgba(255, 255, 255, 0.5);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: background .4s ease-in-out, color .4s ease-in-out;
+  transition: background .4s ease-in-out, color .4s ease-in-out;
 }
 
 body {
   margin: 0 0 0 auto;
   font-size: 16px;
   overflow-x: hidden;
+  background-color: var(--color-page-background);
+  color: var(--color-text);
 }
 
 main {
@@ -2696,6 +2705,7 @@ main .grid {
   max-width: 100%;
   margin: 0px auto;
   overflow: hidden;
+  grid-gap: 0 2em;
 }
 
 @media (max-width: 1400px) {
@@ -2712,7 +2722,7 @@ main .grid-item {
 }
 
 main .btn {
-  color: #000;
+  color: var(--color-text);
   cursor: pointer;
   font-size: 16px;
   font-weight: 400;
@@ -2783,9 +2793,9 @@ main .text-container {
 }
 
 main .image-container {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -2802,7 +2812,7 @@ main .image-container {
 }
 
 main .image-container img {
-  max-width: 67.5%;
+  max-width: 80%;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -2810,9 +2820,7 @@ main .image-container img {
       -ms-flex-pack: end;
           justify-content: flex-end;
   z-index: 1;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-  margin-right: 4.25%;
+  margin-right: 3%;
 }
 
 @media (max-width: 768px) {
@@ -2885,7 +2893,7 @@ main .container p.subtitle {
 
 @media (min-width: 1024px) {
   main .container p.subtitle {
-    font-size: 1.25em;
+    font-size: 1.4em;
   }
 }
 
@@ -2899,5 +2907,28 @@ main .container a {
 main .container .grid {
   min-height: 498px;
   margin-top: 4em;
+}
+
+@media (max-width: 1600px) {
+  main .container .grid {
+    min-height: calc(100vh - 120px);
+    margin-top: 0px;
+  }
+}
+
+.dark {
+  --color-page-background: #202124;
+  --color-text: white;
+  --color-gray-light: rgba(32, 33, 36, 0.5);
+  --color-gray-dark: rgba(255, 255, 255, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark {
+    --color-page-background: white;
+    --color-text: #202124;
+    --color-gray-light: rgba(255, 255, 255, 0.5);
+    --color-gray-dark: rgba(32, 33, 36, 0.5);
+  }
 }
 /*# sourceMappingURL=style.css.map */

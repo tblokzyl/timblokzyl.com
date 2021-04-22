@@ -37,6 +37,37 @@
      }
  });
 
+ function toggleDarkMode() {
+	document.body.classList.toggle("dark");
+	document.body.classList.toggle("light");
+ }
+
+ function handleDarkMode() {
+    var button = document.querySelector('.item-dark-mode');
+		const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+
+		if(userPrefersDark && document.body.classList.contains("light")){
+			toggleDarkMode();
+			button.innerText = "Light Mode";
+		}
+		else if(userPrefersDark && document.body.classList.contains("dark") || userPrefersLight && document.body.classList.contains("light") || userPrefersLight && document.body.classList.contains("dark")){ 
+			toggleDarkMode();
+			button.innerText = "Dark Mode";
+			console.log("hello");
+		}
+		else {
+			if(document.body.classList.contains("dark")) {
+				toggleDarkMode();
+				button.innerText = "Light Mode";
+			} 
+			else {
+				toggleDarkMode();
+				button.innerText = "Dark Mode";
+			}
+		}
+ }
+
 function globalNavDropdowns(e) {
     var t = this;
     this.container = document.querySelector(e), this.root = this.container.querySelector(".navRoot"), this.primaryNav = this.root.querySelector(".navSection.primary"), this.primaryNavItem = this.root.querySelector(".navSection.primary .rootLink:last-child"), this.secondaryNavItem = this.root.querySelector(".navSection.secondary .rootLink:first-child"), this.checkCollision(), window.addEventListener("load", this.checkCollision.bind(this)), window.addEventListener("resize", this.checkCollision.bind(this)), this.container.classList.add("noDropdownTransition"), this.dropdownBackground = this.container.querySelector(".dropdownBackground"), this.dropdownBackgroundAlt = this.container.querySelector(".alternateBackground"), this.dropdownContainer = this.container.querySelector(".dropdownContainer"), this.dropdownArrow = this.container.querySelector(".dropdownArrow"), this.dropdownRoots = Strut.queryArray(".hasDropdown", this.root), this.dropdownSections = Strut.queryArray(".dropdownSection", this.container).map(function(e) {

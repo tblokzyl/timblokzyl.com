@@ -775,7 +775,7 @@ code, pre {
   transition: color .1s
 }
 .globalNav a:hover {
-  color: #32325d
+  color: var(--color-gray-dark);
 }
 .globalNav>.container-lg {
   padding: 0
@@ -875,12 +875,12 @@ code, pre {
   font-weight: 500
 }
 .globalNav .colorize {
-  color: #000;
+  color: var(--color-text);
   -webkit-transition: color .1s ease;
   transition: color .1s ease
 }
 .globalNav .colorize.active, .globalNav .colorize:hover {
-  color: #32325d
+  color: var(--color-gray-dark);
 }
 .globalNav .hasDropdown {
   cursor: default
@@ -1061,10 +1061,10 @@ code, pre {
   transition: color .1s
 }
 .globalNav .linkContainer:hover .linkTitle, .globalNav .linkTitle:hover {
-  color: #32325d
+  color: var(--color-gray-dark);
 }
 .globalNav .linkContainer:hover .linkSub {
-  color: #424770
+  color: var(--color-gray-light);
 }
 .globalNav .hover-fillDark, .globalNav .hover-fillLight {
   -webkit-transition: fill .1s;

@@ -1,15 +1,37 @@
+  $color-black: rgb(32, 33, 36);
+$color-white: rgb(255,255,255);
+$color-gray-light: rgba($color-white, .5);
+$color-gray-dark: rgba($color-black, .5);
 
 @import "menu";
-@import "owl-slider";   
+@import "owl-slider";  
+
+:root {
+  --color-page-background: #{$color-white};
+  --color-text: #{$color-black};
+  --color-gray-light: #{$color-gray-light};
+  --color-gray-dark: #{$color-gray-dark};
+  @media(prefers-color-scheme: dark) {
+    --color-page-background: #{$color-black};
+    --color-text: #{$color-white};
+    --color-gray-light: #{$color-gray-dark};
+    --color-gray-dark: #{$color-gray-light};
+  }
+}
+
+
 
 * {
   box-sizing: border-box;
+  transition: background .4s ease-in-out, color .4s ease-in-out;
 }
 
 body {
   margin: 0 0 0 auto;
   font-size: 16px;
   overflow-x: hidden;   
+  background-color: var(--color-page-background);
+  color: var(--color-text);
 } 
    
 main {
@@ -68,6 +90,7 @@ h2 {
   max-width: 100%;
   margin: 0px auto;
   overflow: hidden;
+  grid-gap: 0 2em;
   @media (max-width: 1400px) {
     min-height: auto;
     padding: 0 0 0;
@@ -79,7 +102,7 @@ h2 {
 }
 
 .btn {
-  color: #000 ;
+  color: var(--color-text) ;
   cursor: pointer;
   //display: block;
   font-size:16px;
@@ -138,7 +161,7 @@ h2 {
 }
 
 .image-container {
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   position: relative;
   @media (max-width: 768px) {
@@ -146,12 +169,11 @@ h2 {
     margin-top: -48px;
   }
   img { 
-    max-width:67.5%;
+    max-width:80%;
     align-items: flex-end;
     justify-content: flex-end;
     z-index: 1;
-    transform: scaleX(-1);
-    margin-right: 4.25%;
+    margin-right: 3%;
     @media (max-width: 768px) {
       max-width: 50%;
       margin-right: 0%;
@@ -200,7 +222,7 @@ img {
     margin: 2em auto;
   }
 } 
- 
+    
 .container {
   p, a {
     font-family: 'Lato';
@@ -208,10 +230,10 @@ img {
   }
   p.subtitle {
     @media (min-width: 1024px) {
-      font-size: 1.25em;
+      font-size: 1.4em;
     }
     line-height: 1.75em;
-  }
+  } 
   a {
     margin: .5em 0 0em 0;
     line-height:55px;
@@ -221,9 +243,25 @@ img {
   .grid {
     min-height: 498px;
     margin-top: 4em;
+    @media(max-width: 1600px) {
+      min-height: calc(100vh - 120px);
+      margin-top: 0px;
+    }
   }
 } 
+}    
 
-
+.dark {
+  --color-page-background: #{$color-black};
+  --color-text: #{$color-white};
+  --color-gray-light: #{$color-gray-dark};
+  --color-gray-dark: #{$color-gray-light};
+  @media (prefers-color-scheme: dark) {
+    --color-page-background: #{$color-white};
+    --color-text: #{$color-black};
+    --color-gray-light: #{$color-gray-light};
+    --color-gray-dark: #{$color-gray-dark};
+  }
 }
+
 

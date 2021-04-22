@@ -17,13 +17,13 @@ $color-gray-dark: rgba($color-black, .5);
     --color-gray-light: #{$color-gray-dark};
     --color-gray-dark: #{$color-gray-light};
   }
-}
-
-
-
+} 
+  
+ 
+  
 * {
   box-sizing: border-box;
-  transition: background .4s ease-in-out, color .4s ease-in-out;
+  transition: background-color .4s ease-in-out, color .4s ease-in-out;
 }
 
 body {

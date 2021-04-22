@@ -2620,8 +2620,8 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: background .4s ease-in-out, color .4s ease-in-out;
-  transition: background .4s ease-in-out, color .4s ease-in-out;
+  -webkit-transition: background-color .4s ease-in-out, color .4s ease-in-out;
+  transition: background-color .4s ease-in-out, color .4s ease-in-out;
 }
 
 body {

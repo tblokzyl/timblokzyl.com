@@ -987,6 +987,7 @@ code, pre {
 .globalNav .item-home h1 {
   line-height: 50px;
   font-size: 20px;
+  font-weight: 400;
   margin: 0;
   color: inherit;
 }
@@ -2905,7 +2906,6 @@ main .container a {
 }
 
 main .container .grid {
-  min-height: 498px;
   margin-top: 4em;
 }
 
@@ -2914,6 +2914,13 @@ main .container .grid {
     min-height: calc(100vh - 120px);
     margin-top: 0px;
   }
+}
+
+.light {
+  --color-page-background: #202124;
+  --color-text: white;
+  --color-gray-light: rgba(32, 33, 36, 0.5);
+  --color-gray-dark: rgba(255, 255, 255, 0.5);
 }
 
 .dark {

@@ -32,8 +32,8 @@ function handleDarkMode() {
 		console.log('hey');
 	}
 	else if (userPrefersLight && document.body.classList.contains("light")) {
-		toggleDarkMode();
 		button.innerText = "Dark Mode";
+        toggleDarkMode();
 	}
 	else {
 		if(document.body.classList.contains("dark")) {

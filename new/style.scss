@@ -248,6 +248,13 @@ img {
 } 
 }    
 
+.light {
+  --color-page-background: #{$color-black};
+  --color-text: #{$color-white};
+  --color-gray-light: #{$color-gray-dark};
+  --color-gray-dark: #{$color-gray-light};
+}
+
 .dark {
   --color-page-background: #{$color-white};
   --color-text: #{$color-black};

@@ -1,4 +1,4 @@
-  $color-black: rgb(32, 33, 36);
+$color-black: rgb(32, 33, 36);
 $color-white: rgb(255,255,255);
 $color-gray-light: rgba($color-white, .5);
 $color-gray-dark: rgba($color-black, .5);
@@ -18,8 +18,6 @@ $color-gray-dark: rgba($color-black, .5);
     --color-gray-dark: #{$color-gray-light};
   }
 } 
-  
- 
   
 * {
   box-sizing: border-box;
@@ -241,7 +239,6 @@ img {
     font-size: 1.25em;
   }
   .grid {
-    min-height: 498px;
     margin-top: 4em;
     @media(max-width: 1600px) {
       min-height: calc(100vh - 120px);
@@ -252,16 +249,10 @@ img {
 }    
 
 .dark {
-  --color-page-background: #{$color-black};
-  --color-text: #{$color-white};
-  --color-gray-light: #{$color-gray-dark};
-  --color-gray-dark: #{$color-gray-light};
-  @media (prefers-color-scheme: dark) {
-    --color-page-background: #{$color-white};
-    --color-text: #{$color-black};
-    --color-gray-light: #{$color-gray-light};
-    --color-gray-dark: #{$color-gray-dark};
-  }
+  --color-page-background: #{$color-white};
+  --color-text: #{$color-black};
+  --color-gray-light: #{$color-gray-light};
+  --color-gray-dark: #{$color-gray-dark};
 }
 
 

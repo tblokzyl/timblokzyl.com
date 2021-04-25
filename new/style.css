@@ -2388,14 +2388,13 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 .cards {
   position: relative;
   width: 100%;
-  padding: 6em 0;
+  margin: 6em auto;
   max-width: 1400px;
-  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .cards {
-    padding: 2em 0;
+    margin: 2em 0;
   }
 }
 
@@ -2650,7 +2649,7 @@ body {
 
 main {
   font-size: 16px;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 main > .container {
@@ -2933,6 +2932,12 @@ main .content-container {
   }
 }
 
+@media (min-width: 1024px) {
+  main .container.hero {
+    padding-top: 80px;
+  }
+}
+
 main .container p, main .container a {
   font-family: 'Lato';
   line-height: 1.5em;
@@ -2963,14 +2968,10 @@ main .container a {
   }
 }
 
-main .container .grid {
-  margin-top: 4.2em;
-}
-
 @media (max-width: 1600px) {
   main .container .grid {
-    min-height: calc(100vh - 80px);
-    min-height: calc(calc(var(--vh, 1vh) * 100) - 80px);
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100 - 80px);
     margin-top: 0px;
   }
 }

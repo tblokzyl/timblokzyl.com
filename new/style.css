@@ -2953,6 +2953,7 @@ main .container .grid {
 @media (max-width: 1600px) {
   main .container .grid {
     min-height: calc(100vh - 80px);
+    min-height: calc(calc(var(--vh, 1vh) * 100) - 80px);
     margin-top: 0px;
   }
 }

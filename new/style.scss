@@ -73,7 +73,7 @@ h2 {
     background-size: 400px;
     background-repeat: repeat;
     padding: 1em 0px; 
-    @media(max-width: $small) {
+    @media(max-width: $small) { 
       padding: 2em 0px; 
     }
     &.tall { 

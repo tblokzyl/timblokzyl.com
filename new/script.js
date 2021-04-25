@@ -76,6 +76,7 @@ function handleDarkMode() {
      animateIn: 'slide-down',
      nav: true,
      ltr: true,
+     rewind: true,
      navText: [
         "<i class='fa fa-chevron-left'></i>",
         "<i class='fa fa-chevron-right'></i>"
@@ -83,9 +84,11 @@ function handleDarkMode() {
      responsive : {
         0 : {
             items: 1.5,
+            margin: 20,
         },
         480 : {
             items: 1.5,
+            margin:20,
         },
         768 : {
             items: 1,

@@ -2,6 +2,9 @@ $color-black: rgb(32, 33, 36);
 $color-white: rgb(255,255,255);
 $color-gray-light: rgba($color-white, .5);
 $color-gray-dark: rgba($color-black, .5);
+$small: 768px; 
+$medium: 1024px;
+$large: 1200px;
 
 @import "menu";
 @import "owl-slider";  
@@ -54,18 +57,15 @@ h1 {
   @media (min-width: 1200px) {
     font-size: 4.2em;
   }
-  font-size: 3em;
+  font-size: 1.8em;
   margin: 0em;
-  @media (max-width: 1200px) { 
-    font-size: 2em;
-  } 
 }  
 
 h2 {
   font-size: 3.16em;    
   margin: .5em 0;    
-  @media (max-width: 768px) {
-    font-size: 1.5em;
+  @media (max-width: $small) {
+    font-size: 1.6em;
   }
   &.full-width {  
     text-align: center;
@@ -73,10 +73,10 @@ h2 {
     background-size: 400px;
     background-repeat: repeat;
     padding: 1em 0px; 
-    @media(max-width: 768px) {
-      padding: 2em 0px;
+    @media(max-width: $small) {
+      padding: 2em 0px; 
     }
-    &.tall {
+    &.tall { 
       padding: 2em 0;  
     }
   }
@@ -84,14 +84,23 @@ h2 {
 
 h3 {
   font-size: 2.37em;
+  @media (max-width: $small) {
+    font-size: 1.425em;
+  }
 }
 
 h4 {
   font-size: 1.77em;
+  @media (max-width: $small) {
+    font-size: 1.266em;
+  }
 }
 
 h5 {
   font-size: 1.33em;
+  @media (max-width: $small) {
+    font-size: 1.125em;
+  }
 }
 
 h6 {  
@@ -173,7 +182,7 @@ h6 {
 .text-container {
   justify-content: center;
   padding: 2em 20px;
-  @media(max-width: 768px) {
+  @media(max-width: $small) {
     padding: 20px;
   }
   flex-direction: column;
@@ -183,7 +192,7 @@ h6 {
   align-items: center;
   justify-content: flex-end;
   position: relative;
-  @media (max-width: 768px) {
+  @media (max-width: $small) {
     justify-content: flex-end; 
     align-items: flex-end;
   }
@@ -193,7 +202,7 @@ h6 {
     justify-content: flex-end;
     z-index: 1;
     margin-right: 3%;
-    @media (max-width: 768px) {
+    @media (max-width: $small) {
       max-width: 50%;
       margin-right: 0%;
     }      
@@ -204,7 +213,7 @@ h6 {
     z-index: 0;
     overflow: hidden;
     right: -20%;
-    @media (max-width: 768px) {
+    @media (max-width: $small) {
       transform: scale(.65);
       bottom: -130%;
       right: -50%;
@@ -226,7 +235,7 @@ img {
   max-width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $small) {
   .grid {
     grid-template-columns: 1fr;
     min-height: 0px;
@@ -237,7 +246,7 @@ img {
   margin: 0em auto;
   padding: 0 20px;
   line-height: 2em;
-  @media (max-width: 768px) {
+  @media (max-width: $small) {
     margin: 2em auto;
   }
 } 
@@ -258,7 +267,7 @@ img {
     line-height:50px;
     display: block;
     font-size: 1.25em;
-    @media(max-width: 768px) {
+    @media(max-width: $small) {
       font-size: 1em;
       line-height: 45px;
       max-width: 160px;

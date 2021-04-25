@@ -82,10 +82,10 @@ function handleDarkMode() {
       ],
      responsive : {
         0 : {
-            items: 1,
+            items: 1.5,
         },
         480 : {
-            items: 1,
+            items: 1.5,
         },
         768 : {
             items: 1,

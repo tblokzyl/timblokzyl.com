@@ -17,6 +17,9 @@
   position: relative;
   width: 100%;
   padding: 6em 0;
+  @media(max-width: $small) {
+    padding: 2em 0;
+  }
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -82,7 +85,6 @@
   display: block;
   width: 100%;
   height: 100;
-  font-size: 1.5em;
   font-family: 'Poppins';
   font-weight: 300;
   overflow: hidden;
@@ -180,7 +182,7 @@
 
 .owl-carousel .owl-prev {
 	left: -30px;
-  @media(max-width: 768px) {
+  @media(max-width: $small) {
     left: 10px;
   }
   top: calc(50% - 15px);
@@ -188,7 +190,7 @@
 
 .owl-carousel .owl-next {
 	right: -30px;
-  @media(max-width: 768px) {
+  @media(max-width: $small) {
     right: 10px;
   }
   top: calc(50% - 15px);

@@ -2393,6 +2393,12 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .cards {
+    padding: 2em 0;
+  }
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2477,7 +2483,6 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   display: block;
   width: 100%;
   height: 100;
-  font-size: 1.5em;
   font-family: 'Poppins';
   font-weight: 300;
   overflow: hidden;
@@ -2663,19 +2668,13 @@ main h1, main h2, main h3, main h4, main h5, main h6 {
 main h1 {
   font-family: 'Poppins';
   font-weight: 500;
-  font-size: 3em;
+  font-size: 1.8em;
   margin: 0em;
 }
 
 @media (min-width: 1200px) {
   main h1 {
     font-size: 4.2em;
-  }
-}
-
-@media (max-width: 1200px) {
-  main h1 {
-    font-size: 2em;
   }
 }
 
@@ -2686,7 +2685,7 @@ main h2 {
 
 @media (max-width: 768px) {
   main h2 {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 }
 
@@ -2712,12 +2711,30 @@ main h3 {
   font-size: 2.37em;
 }
 
+@media (max-width: 768px) {
+  main h3 {
+    font-size: 1.425em;
+  }
+}
+
 main h4 {
   font-size: 1.77em;
 }
 
+@media (max-width: 768px) {
+  main h4 {
+    font-size: 1.266em;
+  }
+}
+
 main h5 {
   font-size: 1.33em;
+}
+
+@media (max-width: 768px) {
+  main h5 {
+    font-size: 1.125em;
+  }
 }
 
 main h6 {

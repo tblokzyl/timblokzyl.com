@@ -210,7 +210,7 @@ h6 {
       right: -50%;
     }
   }
-}
+} 
 
 .full-width {
   left: calc(50%);
@@ -253,16 +253,21 @@ img {
     }
     line-height: 1.75em;
   } 
-  a {
+  a { 
     margin: .5em 0 0em 0;
     line-height:50px;
     display: block;
     font-size: 1.25em;
+    @media(max-width: 768px) {
+      font-size: 1em;
+      line-height: 45px;
+      max-width: 160px;
+    }
   }
   .grid {
     margin-top: 4.2em;
     @media(max-width: 1600px) {
-      min-height: calc(100vh - 120px);
+      min-height: calc(100vh - 80px);
       margin-top: 0px;
     }
   }

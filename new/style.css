@@ -2591,9 +2591,21 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   top: calc(50% - 15px);
 }
 
+@media (max-width: 768px) {
+  .owl-carousel .owl-prev {
+    left: 10px;
+  }
+}
+
 .owl-carousel .owl-next {
   right: -30px;
   top: calc(50% - 15px);
+}
+
+@media (max-width: 768px) {
+  .owl-carousel .owl-next {
+    right: 10px;
+  }
 }
 
 .owl-carousel .owl-dots {
@@ -2926,13 +2938,21 @@ main .container a {
   font-size: 1.25em;
 }
 
+@media (max-width: 768px) {
+  main .container a {
+    font-size: 1em;
+    line-height: 45px;
+    max-width: 160px;
+  }
+}
+
 main .container .grid {
   margin-top: 4.2em;
 }
 
 @media (max-width: 1600px) {
   main .container .grid {
-    min-height: calc(100vh - 120px);
+    min-height: calc(100vh - 80px);
     margin-top: 0px;
   }
 }

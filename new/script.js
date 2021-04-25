@@ -52,7 +52,7 @@ function handleDarkMode() {
  var $owl = $('.loop');
   
  $owl.owlCarousel({
-     autoplay: true,
+     autoplay: false,
      autoplaySpeed: 800,
      autoplayTimeout: 800,
      stagePadding: 20,

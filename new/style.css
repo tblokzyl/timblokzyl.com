@@ -2383,14 +2383,12 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .cards {
   position: relative;
   width: 100%;
   padding: 6em 0;
-  overflow: hidden;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -2589,13 +2587,13 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 }
 
 .owl-carousel .owl-prev {
-  left: 10px;
-  top: calc(50% - 30px);
+  left: -30px;
+  top: calc(50% - 15px);
 }
 
 .owl-carousel .owl-next {
-  right: 10px;
-  top: calc(50% - 30px);
+  right: -30px;
+  top: calc(50% - 15px);
 }
 
 .owl-carousel .owl-dots {
@@ -2646,6 +2644,10 @@ main h1, main h2, main h3, main h4, main h5, main h6, main ol, main p {
   margin: 1em 0;
 }
 
+main h1, main h2, main h3, main h4, main h5, main h6 {
+  font-weight: 600;
+}
+
 main h1 {
   font-family: 'Poppins';
   font-weight: 500;
@@ -2655,7 +2657,7 @@ main h1 {
 
 @media (min-width: 1200px) {
   main h1 {
-    font-size: 4em;
+    font-size: 4.2em;
   }
 }
 
@@ -2666,7 +2668,8 @@ main h1 {
 }
 
 main h2 {
-  font-size: 2.75em;
+  font-size: 3.16em;
+  margin: .5em 0;
 }
 
 @media (max-width: 768px) {
@@ -2691,6 +2694,22 @@ main h2.full-width {
 
 main h2.full-width.tall {
   padding: 2em 0;
+}
+
+main h3 {
+  font-size: 2.37em;
+}
+
+main h4 {
+  font-size: 1.77em;
+}
+
+main h5 {
+  font-size: 1.33em;
+}
+
+main h6 {
+  font-size: 1em;
 }
 
 main .hl {
@@ -2808,7 +2827,9 @@ main .image-container {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-top: -48px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
 }
 
@@ -2900,13 +2921,13 @@ main .container p.subtitle {
 
 main .container a {
   margin: .5em 0 0em 0;
-  line-height: 55px;
+  line-height: 50px;
   display: block;
   font-size: 1.25em;
 }
 
 main .container .grid {
-  margin-top: 4em;
+  margin-top: 4.2em;
 }
 
 @media (max-width: 1600px) {

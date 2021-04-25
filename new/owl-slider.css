@@ -11,14 +11,12 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .cards {
   position: relative;
   width: 100%;
   padding: 6em 0;
-  overflow: hidden;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -217,13 +215,25 @@
 }
 
 .owl-carousel .owl-prev {
-  left: 10px;
-  top: calc(50% - 30px);
+  left: -30px;
+  top: calc(50% - 15px);
+}
+
+@media (max-width: 768px) {
+  .owl-carousel .owl-prev {
+    left: 10px;
+  }
 }
 
 .owl-carousel .owl-next {
-  right: 10px;
-  top: calc(50% - 30px);
+  right: -30px;
+  top: calc(50% - 15px);
+}
+
+@media (max-width: 768px) {
+  .owl-carousel .owl-next {
+    right: 10px;
+  }
 }
 
 .owl-carousel .owl-dots {

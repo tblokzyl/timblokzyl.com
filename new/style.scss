@@ -8,9 +8,9 @@ $large: 1200px;
 
 @import "menu";
 @import "owl-slider";  
-
-:root {
-  --color-page-background: #{$color-white};
+ 
+:root { 
+  --color-page-background: #{$color-white}; 
   --color-text: #{$color-black};
   --color-gray-light: #{$color-gray-light};
   --color-gray-dark: #{$color-gray-dark};
@@ -18,13 +18,13 @@ $large: 1200px;
     --color-page-background: #{$color-black};
     --color-text: #{$color-white};
     --color-gray-light: #{$color-gray-dark};
-    --color-gray-dark: #{$color-gray-light};
+    --color-gray-dark: #{$color-gray-light}; 
   }
 } 
   
 * {
   box-sizing: border-box;
-  transition: background-color .4s ease-in-out, color .4s ease-in-out;
+  transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .25s ease-in-out;
 }
 
 body {
@@ -40,7 +40,7 @@ main {
   padding-top: 80px;
 
 & > .container {
-  padding: 0px;
+  padding: 0px;  
 } 
  
 h1, h2, h3, h4, h5, h6, ol, p {
@@ -155,9 +155,9 @@ h6 {
    
   span { 
     z-index: 20;
-  } 
+  }  
   
-  &:after {
+  &:after { 
     background: #ccc;
     content: "";
     height: 155px;
@@ -177,6 +177,7 @@ h6 {
     left: 120%;
     transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   }
+  border-color: #ff5722;
 }
    
 .text-container {
@@ -221,7 +222,7 @@ h6 {
   }
 } 
 
-.full-width {
+.full-width {    
   left: calc(50%);
   margin-left:calc(-50vw);
   margin-right: -50vw;

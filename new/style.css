@@ -2987,6 +2987,7 @@ img {
   background-size: cover;
   background-position: right;
   z-index: 1;
+  background-color: #1f2029;
 }
 
 .content-container .grid .grid-item.text-content {

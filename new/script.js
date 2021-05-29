@@ -60,7 +60,7 @@ function handleDarkMode() {
 			button.innerText = "Dark Mode";
 		}
 	}
-	count++;
+	count++; 
  }
 
  var $owl = $('.loop');

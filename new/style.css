@@ -2619,16 +2619,18 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 
 :root {
   --color-page-background: white;
-  --color-text: #202124;
+  --color-black-alt: white;
+  --color-text: #12141c;
   --color-gray-light: rgba(255, 255, 255, 0.5);
-  --color-gray-dark: rgba(32, 33, 36, 0.5);
+  --color-gray-dark: rgba(18, 20, 28, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-page-background: #202124;
+    --color-page-background: #12141c;
+    --color-black-alt: #1f2029;
     --color-text: white;
-    --color-gray-light: rgba(32, 33, 36, 0.5);
+    --color-gray-light: rgba(18, 20, 28, 0.5);
     --color-gray-dark: rgba(255, 255, 255, 0.5);
   }
 }
@@ -2638,6 +2640,15 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
           box-sizing: border-box;
   -webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .25s ease-in-out;
   transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .25s ease-in-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  *:focus {
+    -webkit-transition: outline-offset .5s ease;
+    transition: outline-offset .5s ease;
+    outline-offset: 5px;
+    outline-color: #ff5722;
+  }
 }
 
 body {
@@ -2657,15 +2668,15 @@ main > .container {
   padding: 0px;
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6, main ol, main p {
+h1, h2, h3, h4, h5, h6, ol, p {
   margin: 1em 0;
 }
 
-main h1, main h2, main h3, main h4, main h5, main h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-main h1 {
+h1 {
   font-family: 'Poppins';
   font-weight: 500;
   font-size: 1.8em;
@@ -2673,23 +2684,25 @@ main h1 {
 }
 
 @media (min-width: 1200px) {
-  main h1 {
+  h1 {
     font-size: 4.2em;
   }
 }
 
-main h2 {
+h2 {
   font-size: 3.16em;
+  font-weight: 500;
   margin: .5em 0;
+  font-family: 'Poppins';
 }
 
 @media (max-width: 768px) {
-  main h2 {
+  h2 {
     font-size: 1.6em;
   }
 }
 
-main h2.full-width {
+h2.full-width {
   text-align: center;
   background: url(https://i.imgur.com/lZxoWOM.png);
   background-size: 400px;
@@ -2698,79 +2711,78 @@ main h2.full-width {
 }
 
 @media (max-width: 768px) {
-  main h2.full-width {
+  h2.full-width {
     padding: 2em 0px;
   }
 }
 
-main h2.full-width.tall {
+h2.full-width.tall {
   padding: 2em 0;
 }
 
-main h3 {
+h3 {
   font-size: 2.37em;
 }
 
 @media (max-width: 768px) {
-  main h3 {
+  h3 {
     font-size: 1.425em;
   }
 }
 
-main h4 {
+h4 {
   font-size: 1.77em;
 }
 
 @media (max-width: 768px) {
-  main h4 {
+  h4 {
     font-size: 1.266em;
   }
 }
 
-main h5 {
+h5 {
   font-size: 1.33em;
 }
 
 @media (max-width: 768px) {
-  main h5 {
+  h5 {
     font-size: 1.125em;
   }
 }
 
-main h6 {
+h6 {
   font-size: 1em;
 }
 
-main .hl {
+.hl {
   color: #ff5722;
   letter-spacing: 0px;
 }
 
-main .grid {
+.grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   max-width: 100%;
   margin: 0px auto;
-  overflow: hidden;
-  grid-gap: 0 2em;
+  grid-gap: 0 4em;
 }
 
 @media (max-width: 1400px) {
-  main .grid {
+  .grid {
     min-height: auto;
     padding: 0 0 0;
   }
 }
 
-main .grid-item {
+.grid-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .btn {
+.btn {
   color: var(--color-text);
   cursor: pointer;
   font-size: 16px;
@@ -2784,25 +2796,25 @@ main .btn {
 }
 
 @media (min-width: 600px) {
-  main .btn {
+  .btn {
     margin: 0 1em 1em;
   }
-  main .btn:hover {
+  .btn:hover {
     text-decoration: none;
   }
 }
 
-main .btn-4 {
+.btn-4 {
   border: 1px solid;
   overflow: hidden;
   position: relative;
 }
 
-main .btn-4 span {
+.btn-4 span {
   z-index: 20;
 }
 
-main .btn-4:after {
+.btn-4:after {
   background: #ccc;
   content: "";
   height: 155px;
@@ -2818,17 +2830,17 @@ main .btn-4:after {
   z-index: -10;
 }
 
-main .btn-4:hover {
+.btn-4:hover {
   border-color: #ff5722;
 }
 
-main .btn-4:hover:after {
+.btn-4:hover:after {
   left: 120%;
   -webkit-transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
   transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-main .text-container {
+.text-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2840,12 +2852,12 @@ main .text-container {
 }
 
 @media (max-width: 768px) {
-  main .text-container {
+  .text-container {
     padding: 20px;
   }
 }
 
-main .image-container {
+.image-container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2856,7 +2868,7 @@ main .image-container {
 }
 
 @media (max-width: 768px) {
-  main .image-container {
+  .image-container {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -2866,7 +2878,7 @@ main .image-container {
   }
 }
 
-main .image-container img {
+.image-container img {
   max-width: 80%;
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -2879,13 +2891,13 @@ main .image-container img {
 }
 
 @media (max-width: 768px) {
-  main .image-container img {
+  .image-container img {
     max-width: 50%;
     margin-right: 0%;
   }
 }
 
-main .image-container svg {
+.image-container svg {
   position: absolute;
   bottom: -55%;
   z-index: 0;
@@ -2894,7 +2906,7 @@ main .image-container svg {
 }
 
 @media (max-width: 768px) {
-  main .image-container svg {
+  .image-container svg {
     -webkit-transform: scale(0.65);
             transform: scale(0.65);
     bottom: -130%;
@@ -2902,7 +2914,7 @@ main .image-container svg {
   }
 }
 
-main .full-width {
+.full-width {
   left: calc(50%);
   margin-left: calc(-50vw);
   margin-right: -50vw;
@@ -2912,53 +2924,143 @@ main .full-width {
   width: 100vw;
 }
 
-main img {
+img {
   max-width: 100%;
 }
 
 @media (max-width: 768px) {
-  main .grid {
+  .grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     min-height: 0px;
   }
 }
 
-main .content-container {
-  max-width: 950px;
+.content-container {
+  max-width: 1400px;
   margin: 0em auto;
   padding: 0 20px;
   line-height: 2em;
 }
 
 @media (max-width: 768px) {
-  main .content-container {
+  .content-container {
     margin: 2em auto;
   }
 }
 
-@media (min-width: 1024px) {
-  main .container.hero {
+.content-container .grid {
+  padding: 40px 0px 80px;
+  grid-gap: 0 6em;
+}
+
+.content-container .grid .grid-item.image {
+  position: relative;
+}
+
+.content-container .grid .grid-item.image::before, .content-container .grid .grid-item.image::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #ff5722;
+  z-index: 0;
+  top: 0%;
+  border-radius: 50%;
+}
+
+.content-container .grid .grid-item.image::before {
+  left: -2vw;
+}
+
+.content-container .grid .grid-item.image::after {
+  right: -2vw;
+}
+
+.content-container .grid .grid-item.image div {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100 - 200px);
+  width: 100%;
+  background-size: cover;
+  background-position: right;
+  z-index: 1;
+}
+
+.content-container .grid .grid-item.text-content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content-container .grid .grid-item.text-content::before {
+  display: none;
+}
+
+.content-container .grid .grid-item.text-content h2 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.content-container .grid .grid-item.text-content p {
+  font-size: 20px;
+  max-width: 600px;
+  line-height: 1.75em;
+  font-weight: 400;
+}
+
+.content-container .grid .grid-item.text-content p.subtitle {
+  font-size: 24px;
+  line-height: 1.5em;
+  margin: 0em 0 .5em;
+  font-weight: 600;
+}
+
+.content-container .grid .grid-item.text-content .inline-buttons {
+  display: inline-block;
+}
+
+.content-container .grid .grid-item.text-content .inline-buttons a:first-of-type {
+  margin-right: 1em;
+}
+
+.content-container .grid .grid-item.text-content .inline-buttons .btn-4 {
+  margin: 1em 0 0em 0;
+  margin-right: 0px;
+  line-height: 50px;
+  font-size: 1.25em;
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+@media (min-width: 1540px) {
+  .container.hero {
     padding-top: 80px;
   }
 }
 
-main .container p, main .container a {
+.container p, .container a {
   font-family: 'Lato';
   line-height: 1.5em;
 }
 
-main .container p.subtitle {
+.container p.subtitle {
   line-height: 1.75em;
 }
 
 @media (min-width: 1024px) {
-  main .container p.subtitle {
+  .container p.subtitle {
     font-size: 1.4em;
   }
 }
 
-main .container a {
+.container a {
   margin: .5em 0 0em 0;
   line-height: 50px;
   display: block;
@@ -2966,7 +3068,7 @@ main .container a {
 }
 
 @media (max-width: 768px) {
-  main .container a {
+  .container a {
     font-size: 1em;
     line-height: 45px;
     max-width: 160px;
@@ -2974,7 +3076,7 @@ main .container a {
 }
 
 @media (max-width: 1600px) {
-  main .container .grid {
+  .container .grid {
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100 - 80px);
     margin-top: 0px;
@@ -2982,16 +3084,16 @@ main .container a {
 }
 
 .light {
-  --color-page-background: #202124;
+  --color-page-background: #12141c;
   --color-text: white;
-  --color-gray-light: rgba(32, 33, 36, 0.5);
+  --color-gray-light: rgba(18, 20, 28, 0.5);
   --color-gray-dark: rgba(255, 255, 255, 0.5);
 }
 
 .dark {
   --color-page-background: white;
-  --color-text: #202124;
+  --color-text: #12141c;
   --color-gray-light: rgba(255, 255, 255, 0.5);
-  --color-gray-dark: rgba(32, 33, 36, 0.5);
+  --color-gray-dark: rgba(18, 20, 28, 0.5);
 }
 /*# sourceMappingURL=style.css.map */

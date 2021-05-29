@@ -1,4 +1,5 @@
-$color-black: rgb(32, 33, 36);
+$color-black: rgb(18, 20, 28);
+$color-black-alt: rgb(31, 32, 41);
 $color-white: rgb(255,255,255);
 $color-gray-light: rgba($color-white, .5);
 $color-gray-dark: rgba($color-black, .5);
@@ -11,20 +12,29 @@ $large: 1200px;
  
 :root { 
   --color-page-background: #{$color-white}; 
+  --color-black-alt: #{$color-white}; 
   --color-text: #{$color-black};
   --color-gray-light: #{$color-gray-light};
   --color-gray-dark: #{$color-gray-dark};
   @media(prefers-color-scheme: dark) {
     --color-page-background: #{$color-black};
+    --color-black-alt: #{$color-black-alt}; 
     --color-text: #{$color-white};
     --color-gray-light: #{$color-gray-dark};
     --color-gray-dark: #{$color-gray-light}; 
   }
 } 
   
-* {
+* { 
   box-sizing: border-box;
   transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .25s ease-in-out;
+  &:focus {
+    @media (prefers-reduced-motion: no-preference) {
+      transition: outline-offset .5s ease;
+      outline-offset: 5px;
+      outline-color: #ff5722;
+    }
+  } 
 }
 
 body {
@@ -35,12 +45,13 @@ body {
   color: var(--color-text);
 } 
    
-main {
+main { 
   font-size: 16px; 
   padding-top: 80px;
 
-& > .container {
-  padding: 0px;  
+  & > .container {
+    padding: 0px;  
+  } 
 } 
  
 h1, h2, h3, h4, h5, h6, ol, p {
@@ -62,8 +73,10 @@ h1 {
 }  
 
 h2 {
-  font-size: 3.16em;    
+  font-size: 3.16em;
+  font-weight: 500;    
   margin: .5em 0;    
+  font-family: 'Poppins';     
   @media (max-width: $small) {
     font-size: 1.6em;
   }
@@ -117,8 +130,7 @@ h6 {
   grid-template-columns: 1fr 1fr;
   max-width: 100%;
   margin: 0px auto;
-  overflow: hidden;
-  grid-gap: 0 2em;
+  grid-gap: 0 4em;
   @media (max-width: 1400px) {
     min-height: auto;
     padding: 0 0 0;
@@ -242,19 +254,92 @@ img {
     min-height: 0px;
   }
 }
+
 .content-container {
-  max-width: 950px;
+  max-width: 1400px;
   margin: 0em auto;
   padding: 0 20px;
   line-height: 2em;
   @media (max-width: $small) {
     margin: 2em auto;
   }
+  .grid {
+    padding: 40px 0px 80px;
+    grid-gap: 0 6em;
+    .grid-item {
+      &.image {
+        position: relative;
+        &::before,
+        &::after {
+          content: '';
+          display: flex;
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background-color: #ff5722;
+          z-index: 0;
+          top: 0%;
+          border-radius: 50%;
+        }
+        &::before {
+          left: -2vw;
+        }
+        &::after {
+          right: -2vw;
+        }
+        div {
+          min-height: 100vh;
+          min-height: calc(var(--vh, 1vh) * 100 - 200px);
+          width: 100%;
+          background-size: cover;
+          background-position: right;
+          z-index: 1;
+        }
+      }
+      &.text-content {
+        &::before {
+          display: none;
+        }
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+          margin-top: 0;
+          margin-bottom: 1em;
+        }
+        p {
+          font-size: 20px;
+          max-width: 600px;
+          line-height: 1.75em;
+          font-weight: 400;
+        }
+        p.subtitle {
+          font-size: 24px;
+          line-height: 1.5em;
+          margin: 0em 0 .5em;
+          font-weight: 600;
+        }
+        .inline-buttons {
+          display: inline-block;
+          a:first-of-type {
+            margin-right: 1em;
+          }
+          .btn-4 {
+            margin: 1em 0 0em 0;
+            margin-right: 0px;
+            line-height: 50px;
+            font-size: 1.25em;
+            padding-bottom: 4px;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
 } 
     
 .container { 
   &.hero {
-    @media(min-width: 1024px) {
+    @media(min-width: 1540px) {
       padding-top: 80px;
     }
   }
@@ -287,7 +372,6 @@ img {
     }
   }
 } 
-}    
 
 .light {
   --color-page-background: #{$color-black};

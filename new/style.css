@@ -2981,8 +2981,8 @@ img {
   border-radius: 50%;
   left: -10%;
   opacity: .25;
-  -webkit-animation: mymove .3s forwards ease-out;
-          animation: mymove .3s forwards ease-out;
+  -webkit-animation: mymove .4s forwards ease-out;
+          animation: mymove .4s forwards ease-out;
 }
 
 @media (max-width: 768px) {
@@ -3009,6 +3009,8 @@ img {
 }
 
 .content-container .grid .grid-item.text-content {
+  -webkit-animation: fade-in-left-slight .4s forwards;
+          animation: fade-in-left-slight .4s forwards;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -3192,6 +3194,32 @@ img {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: .75;
+  }
+}
+
+@-webkit-keyframes fade-in-left-slight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left-slight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=style.css.map */

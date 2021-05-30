@@ -286,7 +286,7 @@ img {
           border-radius: 50%;
           left: -10%;
           opacity: .25;
-          animation: mymove .2s forwards ease-out;
+          animation: mymove .4s forwards ease-out;
           @media(max-width: $small) {
             display: none;    
           }
@@ -306,6 +306,7 @@ img {
         }
       }
       &.text-content {
+        animation: fade-in-left-slight .4s forwards;
         &::before {
           display: none;
         }
@@ -443,4 +444,16 @@ img {
   100% {transform: scale(1);
     opacity: .75;}
 }
+
+@keyframes fade-in-left-slight {
+	0% {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+} 
 

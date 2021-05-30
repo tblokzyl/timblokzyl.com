@@ -261,11 +261,14 @@ img {
   padding: 0 20px;
   line-height: 2em;
   @media (max-width: $small) {
-    margin: 2em auto;
+    margin: 0em auto;
   }
   .grid {
     padding: 40px 0px 80px;
     grid-gap: 0 6em;
+    @media(max-width: $small) {
+      padding: 0px;
+    }
     .grid-item {
       &.image {
         position: relative;
@@ -280,6 +283,9 @@ img {
           z-index: 0;
           top: 0%;
           border-radius: 50%;
+          @media(max-width: $small) {
+            display: none;
+          }
         }
         &::before {
           left: -2vw;
@@ -290,11 +296,15 @@ img {
         div {
           min-height: 100vh;
           min-height: calc(var(--vh, 1vh) * 100 - 200px);
+          @media(max-width: $small) {
+            min-height: calc(var(--vh, 1vh) * 50 - 80px);
+          }
           width: 100%;
           background-size: cover;
           background-position: right;
           z-index: 1;
           background-color: #1f2029;
+          border-radius: 6px;
         }
       }
       &.text-content {
@@ -318,6 +328,23 @@ img {
           line-height: 1.5em;
           margin: 0em 0 .5em;
           font-weight: 600;
+        }
+
+        @media(max-width: $small) {
+          h2 {
+            margin-top: 1em
+          }
+          p {
+            font-size: 16px;
+            &.subtitle {
+              font-size: 1.166em;
+            }
+          }
+          .btn.btn-4 {
+            font-size: 16px !important;
+            max-width: calc(50% - .75em) !important;
+            margin-bottom: 1em !important;
+          }
         }
         .inline-buttons {
           display: inline-block;

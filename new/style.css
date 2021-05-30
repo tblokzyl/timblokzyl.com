@@ -2945,13 +2945,19 @@ img {
 
 @media (max-width: 768px) {
   .content-container {
-    margin: 2em auto;
+    margin: 0em auto;
   }
 }
 
 .content-container .grid {
   padding: 40px 0px 80px;
   grid-gap: 0 6em;
+}
+
+@media (max-width: 768px) {
+  .content-container .grid {
+    padding: 0px;
+  }
 }
 
 .content-container .grid .grid-item.image {
@@ -2972,6 +2978,12 @@ img {
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  .content-container .grid .grid-item.image::before, .content-container .grid .grid-item.image::after {
+    display: none;
+  }
+}
+
 .content-container .grid .grid-item.image::before {
   left: -2vw;
 }
@@ -2988,6 +3000,13 @@ img {
   background-position: right;
   z-index: 1;
   background-color: #1f2029;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .content-container .grid .grid-item.image div {
+    min-height: calc(var(--vh, 1vh) * 50 - 80px);
+  }
 }
 
 .content-container .grid .grid-item.text-content {
@@ -3021,6 +3040,23 @@ img {
   line-height: 1.5em;
   margin: 0em 0 .5em;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .content-container .grid .grid-item.text-content h2 {
+    margin-top: 1em;
+  }
+  .content-container .grid .grid-item.text-content p {
+    font-size: 16px;
+  }
+  .content-container .grid .grid-item.text-content p.subtitle {
+    font-size: 1.166em;
+  }
+  .content-container .grid .grid-item.text-content .btn.btn-4 {
+    font-size: 16px !important;
+    max-width: calc(50% - .75em) !important;
+    margin-bottom: 1em !important;
+  }
 }
 
 .content-container .grid .grid-item.text-content .inline-buttons {

@@ -2981,8 +2981,8 @@ img {
   border-radius: 50%;
   left: -10%;
   opacity: .25;
-  -webkit-animation: mymove .5s forwards ease-out;
-          animation: mymove .5s forwards ease-out;
+  -webkit-animation: mymove .3s forwards ease-out;
+          animation: mymove .3s forwards ease-out;
 }
 
 @media (max-width: 768px) {

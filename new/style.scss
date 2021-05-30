@@ -286,7 +286,7 @@ img {
           border-radius: 50%;
           left: -10%;
           opacity: .25;
-          animation: mymove .5s forwards ease-out;
+          animation: mymove .2s forwards ease-out;
           @media(max-width: $small) {
             display: none;    
           }

@@ -2515,8 +2515,9 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 }
 
 .owl-stage > div:nth-of-type(2) .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0), black), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(images/canview.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), black), url(images/canview.jpg);
+  background-position: center;
 }
 
 .owl-stage > div:nth-of-type(3) .card {
@@ -2530,8 +2531,9 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
 }
 
 .owl-stage > div:nth-of-type(5) .card {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0), black), url(https://www.visitniagaracanada.com/wp-content/uploads/2017/06/canview-1920x2848.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(black)), url(images/canview.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), black), url(images/canview.jpg);
+  background-position: center;
 }
 
 .owl-stage > div:nth-of-type(6) .card {

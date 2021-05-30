@@ -297,7 +297,7 @@ img {
           min-height: 100vh;
           min-height: calc(var(--vh, 1vh) * 100 - 200px);
           @media(max-width: $small) {
-            min-height: calc(var(--vh, 1vh) * 50 - 80px);
+            min-height: 100vw;
           }
           width: 100%;
           background-size: cover;

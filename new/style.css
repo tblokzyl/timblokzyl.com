@@ -1437,6 +1437,7 @@ code, pre {
   width: 50px;
   height: 50px;
   position: relative;
+  margin-right: 6px !important;
 }
 
 .globalNav .navSection.mobile .rootLink h2 {

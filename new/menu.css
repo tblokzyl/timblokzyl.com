@@ -842,6 +842,13 @@ code, pre {
   background: var(--color-page-background);
 }
 
+@media (max-width: 768px) {
+  .globalNav {
+    height: 50px;
+    top: 10px;
+  }
+}
+
 .globalNav ul {
   padding: 0;
   margin: 0;
@@ -948,6 +955,13 @@ code, pre {
   padding: 0 10px;
 }
 
+@media (max-width: 768px) {
+  .globalNav .rootLink {
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
 @media (min-width: 670px) {
   .globalNav .rootLink {
     padding: 0 calc(10px + (100vw - 670px) * .040541);
@@ -988,10 +1002,17 @@ code, pre {
 
 .globalNav .item-home h1 {
   line-height: 80px;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
   margin: 0;
   color: inherit;
+  font-family: inherit;
+}
+
+@media (max-width: 768px) {
+  .globalNav .item-home h1 {
+    line-height: 50px;
+  }
 }
 
 .globalNav .item-home svg {
@@ -1028,6 +1049,14 @@ code, pre {
   -webkit-transition-duration: .25s;
   transition-duration: .25s;
   display: none;
+}
+
+@media (max-width: 768px) {
+  .globalNav .dropdownRoot {
+    top: 80px;
+    -webkit-transform-origin: 50% -50px;
+    transform-origin: 50% -50px;
+  }
 }
 
 @media (min-width: 670px) {
@@ -1611,7 +1640,7 @@ code, pre {
   padding: 0 30px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 80px;
+  line-height: 50px;
 }
 
 .globalNav .mobileProductsList a:hover {

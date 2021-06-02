@@ -44,15 +44,15 @@ body {
   font-size: 16px; 
   overflow-x: hidden;   
   background-color: var(--color-page-background);
-  color: var(--color-text);
+  color: var(--color-text); 
 } 
-   
+     
 main { 
   font-size: 16px; 
   padding-top: 4em;
   @media(min-width: 1540px) {
     padding-top: 5em;
-  }
+  } 
 
   & > .container {
     padding: 0px;  

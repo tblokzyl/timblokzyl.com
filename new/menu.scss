@@ -81,7 +81,7 @@ code, pre {
 @media (min-width:670px) {
   .common-PageTitle {
       font-size: 40px;
-      line-height: 50px
+      line-height: 80px
   }
 }
 .common-PageSubtitle {
@@ -93,7 +93,7 @@ code, pre {
 @media (min-width:670px) {
   .common-PageSubtitle {
       font-size: 40px;
-      line-height: 50px
+      line-height: 80px
   }
 }
 .common-IntroText {
@@ -751,14 +751,16 @@ code, pre {
   font-family: Camphor, Open Sans, Segoe UI, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: -webkit-sticky; /* Safari */
   position: absolute;
   left: 0;
-  top: 10px;
+  top: 0px;
   right: 0;
   z-index: 500;
-  height: 50px;
+  height: 80px;
   -webkit-perspective: 2000px;
-  perspective: 2000px
+  perspective: 2000px;
+  background: var(--color-page-background);
 }
 .globalNav ul {
   padding: 0;
@@ -843,14 +845,14 @@ code, pre {
 }
 .globalNav .rootLink {
   display: inline-block;
-  height: 50px;
+  height: 80px;
   white-space: nowrap;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   font-size: 17px;
-  line-height: 50px;
+  line-height: 80px;
   font-weight: 400;
   margin: 0;
   padding: 0 10px
@@ -886,7 +888,7 @@ code, pre {
   cursor: default
 }
 .globalNav .item-home h1 {
-  line-height: 50px;
+  line-height: 80px;
   font-size: 20px;
   font-weight: 400;
   margin: 0;
@@ -908,12 +910,12 @@ code, pre {
   z-index: 1000;
   left: 0;
   right: 0;
-  top: 50px;
+  top: 80px;
   pointer-events: none;
   -webkit-transform: rotateX(-15deg);
   transform: rotateX(-15deg);
-  -webkit-transform-origin: 50% -50px;
-  transform-origin: 50% -50px;
+  -webkit-transform-origin: 50% -80px;
+  transform-origin: 50% -80px;
   opacity: 0;
   will-change: transform, opacity;
   -webkit-transition-property: opacity, -webkit-transform;
@@ -1278,7 +1280,7 @@ code, pre {
 .globalNav .navSection.mobile .rootLink {
   cursor: pointer;
   width: 50px;
-  height: 50px;
+  height: 80px;
   position: relative;
   margin-right: 6px !important;
 }
@@ -1436,7 +1438,7 @@ code, pre {
   padding: 0 30px;
   font-size: 20px;
   font-weight: 500;
-  line-height: 50px
+  line-height: 80px
 }
 .globalNav .mobileProductsList a:hover {
   color: #32325d

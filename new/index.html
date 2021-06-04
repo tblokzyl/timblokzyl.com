@@ -377,16 +377,18 @@
 
         <div class="dropdownSection right" data-dropdown="company">
           <div class="dropdownContent">
-
             <ul class="linkGroup linkList companyGroup">
-              <li><a class="linkContainer item-about" href="https://stripe.com/about">
+              <li>
+                <a class="linkContainer item-about" href="https://stripe.com/about">
                   <h3 class="linkTitle linkIcon"><svg width="17" height="17">
                       <path fill="#6772E5" class="hover-fillDark"
                         d="M8.5 17a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17zm.178-10.89c.76 0 1.726.278 2.486.69V4.443c-.828-.33-1.656-.502-2.484-.502-2.028 0-3.41 1.06-3.41 2.83 0 2.77 3.8 2.32 3.8 3.513 0 .462-.37.612-.93.612-.827 0-1.867-.366-2.706-.823v2.388c.93.4 1.843.592 2.705.592 2.077 0 3.48-1.027 3.48-2.827 0-2.98-3.82-2.447-3.82-3.572-.003-.39.352-.542.877-.542z">
                       </path>
                     </svg>About Stripe</h3>
-                </a></li>
-              <li><a class="linkContainer item-customers" href="https://stripe.com/customers">
+                </a>
+              </li>
+              <li>
+                <a class="linkContainer item-customers" href="https://stripe.com/customers">
                   <h3 class="linkTitle linkIcon"><svg width="17" height="17">
                       <path fill="#87BBFD" class="hover-fillLight"
                         d="M2 16a1 1 0 0 1-1-1V9a4 4 0 0 1 8 0v7H2zm3-9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"></path>
@@ -395,8 +397,10 @@
                       </path>
                       <path fill="#87BBFD" class="hover-fillLight" d="M11 12h2v4h-2v-4z"></path>
                     </svg>Customers</h3>
-                </a></li>
-              <li><a class="linkContainer item-jobs" href="https://stripe.com/jobs">
+                </a>
+              </li>
+              <li>
+                <a class="linkContainer item-jobs" href="https://stripe.com/jobs">
                   <h3 class="linkTitle linkIcon"><svg width="17" height="17">
                       <path fill="#6772E5" class="hover-fillDark"
                         d="M1.5 4h14c.828 0 1.5.67 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-14A1.5 1.5 0 0 1 0 13.5v-8C0 4.67.67 4 1.5 4z">
@@ -406,7 +410,8 @@
                         d="M11.5 3.5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1V4H4v-.5A2.5 2.5 0 0 1 6.5 1h4A2.5 2.5 0 0 1 13 3.5V4h-1.5v-.5z">
                       </path>
                     </svg>Jobs</h3>
-                </a></li>
+                </a>
+              </li>
             </ul>
 
             <div class="linkGroup blogGroup">
@@ -420,24 +425,25 @@
                   </svg>From the blog</h3>
               </a>
               <ul class="blogPosts">
-                <li><a href="/blog/reproducible-research">
+                <li>
+                  <a href="/blog/reproducible-research">
                     <span class="title ">Reproducible research: Stripe’s approach to data science</span>
-
-                  </a></li>
-                <li><a href="/blog/started-on-stripe-atlas">
+                  </a>
+                </li>
+                <li>
+                  <a href="/blog/started-on-stripe-atlas">
                     <span class="title ">Started on Stripe Atlas</span>
-
-                  </a></li>
-                <li><a href="/blog/works-with-stripe">
+                  </a>
+                </li>
+                <li>
+                  <a href="/blog/works-with-stripe">
                     <span class="title ">Works with Stripe</span>
-
-                  </a></li>
+                  </a>
+                </li>
               </ul>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
 
@@ -517,7 +523,52 @@
       </div>
     </section>
     <section class="content-container">
+      <form name="contact" method="POST" data-netlify="true">
+        <h2>Now, about your project...</h2>
+        <div class="g-row" style="grid-template-columns: 2fr 1fr; grid-gap: 0 4em">
+          <div class="g-column">
+            <p style="margin-bottom: 0px;">I like being on a first-name basis, but it also helps me get in touch with
+              you.</p>
+            <div class="g-row">
+              <p class="g-column">
+                <label>What is your full name?<input type="text" name="name" placeholder="John Smith" /></label>
+              </p>
+              <p class="g-column">
+                <label>What is your email address?<input type="email" name="email"
+                    placeholder="johnsmith@example.com" /></label>
+              </p>
+            </div>
+            <p>
+              <label>What sort of work do you need help with? You can read about our services <a
+                  href="#">here</a>.<select name="role[]" multiple>
+                  <option value="Web Design">Web Design</option>
+                  <option value="Web Development">Web Development</option>
+                  <option value="Consultation">Consultation</option>
+                </select>
+              </label>
+            </p>
+          </div>
+          <div class="g-column">
+            <p>Tell me what you need help with, the purpose of the project and problems I'll be solving.</p>
+            <p>
+              <label>What is your project all about?<textarea
+                  placeholder="Hey Tim, I'd love to talk to you about a web development project we're working on..."
+                  name="message"></textarea></label>
+            </p>
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+        </div>
 
+        <footer class="form-footer">
+          <p>
+            3/6 Questions Remaining
+          </p>
+          <p>
+            <button class="btn btn-4" type="submit">Send Message</button>
+          </p>
+
+        </footer>
+      </form>
     </section>
   </main>
   <!-- partial -->

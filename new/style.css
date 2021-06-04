@@ -2675,15 +2675,15 @@ a.globalFooterCard.card-radar, div.globalFooterCard.card-radar {
           box-sizing: border-box;
   -webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .25s ease-in-out;
   transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .25s ease-in-out;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  *:focus {
-    -webkit-transition: outline-offset .5s ease;
-    transition: outline-offset .5s ease;
-    outline-offset: 5px;
-    outline-color: #ff5722;
-  }
+  /*input, select, textarea {
+      &:focus {
+      @media (prefers-reduced-motion: no-preference) {
+        transition: outline-offset .5s ease;
+        outline-offset: 5px;
+        outline-color: #ff5722;
+      }
+    }
+  } */
 }
 
 body {
@@ -2795,12 +2795,94 @@ h6 {
   font-size: 1em;
 }
 
+form {
+  border: 1px solid #ffffff25;
+  padding: 80px 80px 140px;
+  border-radius: 8px;
+  margin: 7em 0;
+  position: relative;
+}
+
+form h2 {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+form input, form label, form textarea, form select {
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  border-radius: 4px;
+  border: none;
+  font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+  color: var(--color-text);
+}
+
+form input, form textarea, form select {
+  background: none;
+  border: 1px solid var(--color-text);
+  padding: 16px;
+  margin-top: .5em;
+  line-height: 1.5em;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #ff5722;
+  outline: none;
+}
+
+form select option:checked {
+  background: #ff5722;
+}
+
+form p {
+  color: var(--color-text);
+  line-height: 1.75em;
+}
+
+form p label {
+  color: var(--color-text);
+}
+
+form footer.form-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  border-top: 1px solid #ffffff25;
+  height: 80px;
+}
+
+form footer.form-footer button {
+  position: absolute;
+  right: 80px;
+  margin-right: 0px;
+  border: 1px solid var(--color-text);
+  background: none;
+  color: var(--color-text);
+  height: 48px;
+  border-radius: 4px;
+}
+
+form footer.form-footer p:first-of-type {
+  position: absolute;
+  left: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  margin: 0;
+}
+
 .hl {
   color: #ff5722;
   letter-spacing: 0px;
 }
 
-.grid {
+.grid, .g-row {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -2811,7 +2893,7 @@ h6 {
 }
 
 @media (max-width: 1400px) {
-  .grid {
+  .grid, .g-row {
     min-height: auto;
     padding: 0 0 0;
   }
@@ -2849,6 +2931,7 @@ h6 {
   border: 1px solid;
   overflow: hidden;
   position: relative;
+  border-radius: 8px;
 }
 
 .btn-4 span {
@@ -2970,7 +3053,7 @@ img {
 }
 
 @media (max-width: 768px) {
-  .grid {
+  .grid, .g-row {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     min-height: 0px;
@@ -2990,22 +3073,22 @@ img {
   }
 }
 
-.content-container .grid {
+.content-container .grid, .content-container .g-row {
   padding: 40px 0px 80px;
   grid-gap: 0 8em;
 }
 
 @media (max-width: 768px) {
-  .content-container .grid {
+  .content-container .grid, .content-container .g-row {
     padding: 0px;
   }
 }
 
-.content-container .grid .grid-item.image {
+.content-container .grid .grid-item.image, .content-container .g-row .grid-item.image {
   position: relative;
 }
 
-.content-container .grid .grid-item.image::before {
+.content-container .grid .grid-item.image::before, .content-container .g-row .grid-item.image::before {
   content: '';
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3024,12 +3107,12 @@ img {
 }
 
 @media (max-width: 768px) {
-  .content-container .grid .grid-item.image::before {
+  .content-container .grid .grid-item.image::before, .content-container .g-row .grid-item.image::before {
     display: none;
   }
 }
 
-.content-container .grid .grid-item.image div {
+.content-container .grid .grid-item.image div, .content-container .g-row .grid-item.image div {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100 - 200px);
   width: 100%;
@@ -3041,12 +3124,12 @@ img {
 }
 
 @media (max-width: 768px) {
-  .content-container .grid .grid-item.image div {
+  .content-container .grid .grid-item.image div, .content-container .g-row .grid-item.image div {
     min-height: 100vw;
   }
 }
 
-.content-container .grid .grid-item.text-content {
+.content-container .grid .grid-item.text-content, .content-container .g-row .grid-item.text-content {
   -webkit-animation: fade-in-left-slight .4s forwards;
           animation: fade-in-left-slight .4s forwards;
   -webkit-box-pack: center;
@@ -3058,23 +3141,23 @@ img {
           flex-direction: column;
 }
 
-.content-container .grid .grid-item.text-content::before {
+.content-container .grid .grid-item.text-content::before, .content-container .g-row .grid-item.text-content::before {
   display: none;
 }
 
-.content-container .grid .grid-item.text-content h2 {
+.content-container .grid .grid-item.text-content h2, .content-container .g-row .grid-item.text-content h2 {
   margin-top: 0;
   margin-bottom: .75em;
 }
 
-.content-container .grid .grid-item.text-content p {
+.content-container .grid .grid-item.text-content p, .content-container .g-row .grid-item.text-content p {
   font-size: 20px;
   max-width: 600px;
   line-height: 1.75em;
   font-weight: 400;
 }
 
-.content-container .grid .grid-item.text-content p.steps-list {
+.content-container .grid .grid-item.text-content p.steps-list, .content-container .g-row .grid-item.text-content p.steps-list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3em 1fr;
@@ -3084,11 +3167,11 @@ img {
   font-size: 16px;
 }
 
-.content-container .grid .grid-item.text-content p.steps-list:nth-of-type(2) {
+.content-container .grid .grid-item.text-content p.steps-list:nth-of-type(2), .content-container .g-row .grid-item.text-content p.steps-list:nth-of-type(2) {
   margin-top: 1em;
 }
 
-.content-container .grid .grid-item.text-content p.steps-list::before {
+.content-container .grid .grid-item.text-content p.steps-list::before, .content-container .g-row .grid-item.text-content p.steps-list::before {
   content: attr(data-step);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3110,7 +3193,7 @@ img {
   font-weight: 600;
 }
 
-.content-container .grid .grid-item.text-content p.subtitle {
+.content-container .grid .grid-item.text-content p.subtitle, .content-container .g-row .grid-item.text-content p.subtitle {
   font-size: 22px;
   line-height: 1.5em;
   margin: 0em 0 .5em;
@@ -3118,37 +3201,42 @@ img {
 }
 
 @media (max-width: 768px) {
-  .content-container .grid .grid-item.text-content h2 {
+  .content-container .grid .grid-item.text-content h2, .content-container .g-row .grid-item.text-content h2 {
     margin-top: 1em;
   }
-  .content-container .grid .grid-item.text-content p {
+  .content-container .grid .grid-item.text-content p, .content-container .g-row .grid-item.text-content p {
     font-size: 16px;
   }
-  .content-container .grid .grid-item.text-content p.subtitle {
+  .content-container .grid .grid-item.text-content p.subtitle, .content-container .g-row .grid-item.text-content p.subtitle {
     font-size: 1.166em;
   }
-  .content-container .grid .grid-item.text-content .btn.btn-4 {
+  .content-container .grid .grid-item.text-content .btn.btn-4, .content-container .g-row .grid-item.text-content .btn.btn-4 {
     font-size: 16px !important;
     max-width: calc(50% - .75em) !important;
     margin-bottom: 1em !important;
   }
 }
 
-.content-container .grid .grid-item.text-content .inline-buttons {
+.content-container .grid .grid-item.text-content .inline-buttons, .content-container .g-row .grid-item.text-content .inline-buttons {
   display: inline-block;
 }
 
-.content-container .grid .grid-item.text-content .inline-buttons a:first-of-type {
+.content-container .grid .grid-item.text-content .inline-buttons a:first-of-type, .content-container .g-row .grid-item.text-content .inline-buttons a:first-of-type {
   margin-right: 1em;
 }
 
-.content-container .grid .grid-item.text-content .inline-buttons .btn-4 {
+.content-container .grid .grid-item.text-content .inline-buttons .btn-4, .content-container .g-row .grid-item.text-content .inline-buttons .btn-4 {
   margin: 1em 0 0em 0;
   margin-right: 0px;
   line-height: 50px;
   font-size: 1.25em;
   padding-bottom: 4px;
   display: inline-block;
+}
+
+.content-container .g-row {
+  grid-gap: 0 2em;
+  padding: 0px;
 }
 
 @media (min-width: 1540px) {
@@ -3188,7 +3276,7 @@ img {
 }
 
 @media (max-width: 1600px) {
-  .container .grid {
+  .container .grid, .container .g-row {
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100 - 80px);
     margin-top: 0px;

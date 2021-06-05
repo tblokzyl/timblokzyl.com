@@ -2820,7 +2820,7 @@ form {
 
 @media (max-width: 768px) {
   form {
-    padding: 40px 20px 120px;
+    padding: 32px 20px 96px;
     border: none;
     border-radius: 0px;
     margin: 2em 0;
@@ -2855,6 +2855,12 @@ form input[type="email"], form input[type="text"], form textarea, form select {
 form input[type="email"]:focus, form input[type="text"]:focus, form textarea:focus {
   border-color: #ff5722;
   outline: none;
+}
+
+@media (max-width: 768px) {
+  form textarea {
+    min-height: 12em;
+  }
 }
 
 form .checkcontainer {

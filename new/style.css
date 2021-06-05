@@ -3099,6 +3099,10 @@ form footer.form-footer .form-footer-container div.progress-bar-button {
   }
 }
 
+form footer.form-footer .form-footer-container div.progress-bar-button #rc-anchor-container {
+  background: var(--color-page-background) !important;
+}
+
 .hl {
   color: #ff5722;
   letter-spacing: 0px;

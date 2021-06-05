@@ -378,6 +378,9 @@ form {
             max-width: 100%;
           }
         }
+        #rc-anchor-container {
+          background: var(--color-page-background) !important;
+        }
       }
     }
   }

@@ -134,6 +134,12 @@ form {
   padding: 80px 80px 140px;
   margin: 7em 0;
   position: relative;
+  @media(max-width: $small) {
+    padding: 40px 20px 120px;
+    border: none;
+    border-radius: 0px;
+    margin: 2em 0;
+  }
   h2 {
     color: var(--color-text);
     font-weight: 600;
@@ -145,15 +151,17 @@ form {
     border-radius: 4px;
     border: none;
     font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+    font-size: 16px;
     color: var(--color-text);
   }
   
   input[type="email"], input[type="text"], textarea, select {
     background: none;
-    border: 1px solid var(--color-text);
+    border: 1px solid #ffffff25;
     padding: 16px;
     margin-top: .5em;
     line-height: 1.5em;
+    font-size: 16px;
   }
 
   input[type="email"], input[type="text"], textarea {
@@ -172,7 +180,7 @@ form {
         -moz-user-select: none; /* Firefox 2+ */
         -ms-user-select: none; /* IE 10+ */
         user-select: none; /* Standard syntax */
-        border: 1px solid var(--color-text);
+        border: 1px solid #ffffff25;
         border-radius: 4px;
         margin-bottom: 1em;
         padding: .75em 3.5em;
@@ -222,10 +230,10 @@ form {
       /* Style the checkmark/indicator */
       .checkcontainer .checkmark:after {
         left: 7px;
-        top: 3px;
-        width: 7px;
-        height: 12px;
-        border: solid white;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid var(--color-text);
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -296,6 +304,9 @@ form {
     button {
       position: absolute;
       right: 80px;
+      @media(max-width: $small) {
+        right: 20px;
+      }
       margin-right: 0px;
       border: 1px solid var(--color-text);
       background: none;
@@ -306,6 +317,9 @@ form {
     p:first-of-type {
       position: absolute;
       left: 80px;
+      @media(max-width: $small) {
+        left: 20px;
+      }
       display: flex;
       align-items: center;
       height: 80px;
@@ -329,6 +343,10 @@ form {
   grid-gap: 0 4em;
   &.three {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  &.grid-2-1 {
+    grid-template-columns: 2fr 1fr; 
+    grid-gap: 0 4em;
   }
   @media (max-width: 1400px) {
     min-height: auto;
@@ -462,12 +480,20 @@ img {
   line-height: 2em;
   @media (max-width: $small) {
     margin: 0em auto;
+    padding: 0px;
   }
   .grid, .g-row {
     padding: 40px 0px 80px;
     grid-gap: 0 8em;
     @media(max-width: $small) {
       padding: 0px;
+    }
+    &.grid-2-1 {
+      grid-template-columns: 2fr 1fr; 
+      grid-gap: 0 4em;
+      @media(max-width: $small) {
+        grid-template-columns: 1fr;
+      }
     }
     .grid-item {
       &.image {

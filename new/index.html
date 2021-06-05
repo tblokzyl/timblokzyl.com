@@ -524,12 +524,12 @@
     </section>
     <section class="content-container">
       <form name="contact" method="POST" data-netlify="true">
-        <h2>Now, about <span class="hl">your project...</span></h2>
-        <p>I like being on a first-name basis, but it also helps me get in touch with
-          you.</p>
-        <div class="g-row" style="grid-template-columns: 2fr 1fr; grid-gap: 0 4em">
-          <div class="g-column">
+        <h2>Now, about <span class="hl">your project</span></h2>
 
+        <div class="g-row grid-2-1">
+          <div class="g-column">
+            <p>I like being on a first-name basis, but it also helps me get in touch with
+              you.</p>
             <div class="g-row">
               <p class="g-column">
                 <label>What is your full name?<input type="text" name="name" placeholder="John Smith" /></label>
@@ -564,19 +564,19 @@
             </div>
           </div>
           <div class="g-column">
+            <p>Tell me what you need help with, the purpose of the project and problems I'll be solving.</p>
             <p>
               <label>What is your project all about?<textarea
                   placeholder="Hey Tim, I'd love to talk to you about a web development project we're working on..."
                   name="message"></textarea></label>
             </p>
-            <p>Tell me what you need help with, the purpose of the project and problems I'll be solving.</p>
             <div data-netlify-recaptcha="true"></div>
           </div>
         </div>
 
         <footer class="form-footer">
           <p>
-            2/4 Questions Remaining
+            4/4 Questions Remaining
           </p>
           <p>
             <button class="btn btn-4" type="submit">Send Message</button>

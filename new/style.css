@@ -3099,7 +3099,7 @@ form footer.form-footer .form-footer-container div.progress-bar-button {
   }
 }
 
-form footer.form-footer .form-footer-container div.progress-bar-button #rc-anchor-container {
+form footer.form-footer .form-footer-container div.progress-bar-button .rc-anchor-dark {
   background: var(--color-page-background) !important;
 }
 

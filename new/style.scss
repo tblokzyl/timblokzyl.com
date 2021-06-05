@@ -134,7 +134,13 @@ form {
   padding: 80px 80px 140px;
   margin: 7em 0;
   position: relative;
-  @media(max-width: $small) {
+  @media(max-width: $medium) {
+    div.g-row.grid-2-1 {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  @media(max-width: $medium) {
     padding: 32px 20px 96px;
     border: none;
     border-radius: 0px;
@@ -173,7 +179,7 @@ form {
 
   textarea {
     min-height: 9.5em;
-    @media(max-width:$small) {
+    @media(max-width:$medium) {
       min-height: 12em;
     }
   }
@@ -309,7 +315,7 @@ form {
     border-top: 1px solid #ffffff25;
     height: 80px;
     button {
-      @media(max-width: $small) {
+      @media(max-width: $medium) {
         &.btn-4 {
           max-width: calc(100% - 40px);
           width: 100%; 
@@ -342,14 +348,14 @@ form {
       align-items: center;
       justify-content: space-evenly;
       flex-grow: 1;
-      @media(max-width: $small) {
+      @media(max-width: $medium) {
         padding: 0 20px;
         margin-left: 20px;
       }
       div.progress-remaining {
         margin-right: auto;
         display: flex;
-        @media(max-width: $small) {
+        @media(max-width: $medium) {
           display: none;
         }
       }
@@ -358,14 +364,14 @@ form {
         margin: 0 auto;
         height: .4em;
         display: flex;
-        @media(max-width: $small) {
+        @media(max-width: $medium) {
           display: none;
         }
       }
       div.progress-bar-button {
         margin-left: auto;
         display: flex;
-        @media(max-width: $small) {
+        @media(max-width: $medium) {
           width: 100%;
           margin-right: auto;
           button.btn-4 {

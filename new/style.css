@@ -2818,7 +2818,14 @@ form {
   /* Style the indicator (dot/circle) */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  form div.g-row.grid-2-1 {
+    -ms-grid-columns: 1fr !important;
+        grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 1024px) {
   form {
     padding: 32px 20px 96px;
     border: none;
@@ -2861,7 +2868,7 @@ form textarea {
   min-height: 9.5em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   form textarea {
     min-height: 12em;
   }
@@ -3002,7 +3009,7 @@ form footer.form-footer button {
   border-radius: 4px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   form footer.form-footer button {
     right: 20px;
   }
@@ -3040,7 +3047,7 @@ form footer.form-footer .form-footer-container {
           flex-grow: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   form footer.form-footer .form-footer-container {
     padding: 0 20px;
     margin-left: 20px;
@@ -3054,7 +3061,7 @@ form footer.form-footer .form-footer-container div.progress-remaining {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   form footer.form-footer .form-footer-container div.progress-remaining {
     display: none;
   }
@@ -3069,7 +3076,7 @@ form footer.form-footer .form-footer-container div.progress-bar-container {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   form footer.form-footer .form-footer-container div.progress-bar-container {
     display: none;
   }
@@ -3082,7 +3089,7 @@ form footer.form-footer .form-footer-container div.progress-bar-button {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   form footer.form-footer .form-footer-container div.progress-bar-button {
     width: 100%;
     margin-right: auto;

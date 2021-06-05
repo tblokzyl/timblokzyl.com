@@ -2989,6 +2989,10 @@ form p label {
   color: var(--color-text);
 }
 
+form .rc-anchor-dark {
+  background: var(--color-page-background) !important;
+}
+
 form footer.form-footer {
   position: absolute;
   bottom: 0;
@@ -3097,10 +3101,6 @@ form footer.form-footer .form-footer-container div.progress-bar-button {
   form footer.form-footer .form-footer-container div.progress-bar-button button.btn-4 {
     max-width: 100%;
   }
-}
-
-form footer.form-footer .form-footer-container div.progress-bar-button .rc-anchor-dark {
-  background: var(--color-page-background) !important;
 }
 
 .hl {

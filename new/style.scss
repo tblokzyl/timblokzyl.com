@@ -307,6 +307,11 @@ form {
       color: var(--color-text);
     }
   }
+
+  .rc-anchor-dark {
+    background: var(--color-page-background) !important;
+  }
+  
   footer.form-footer {
     position: absolute;
     bottom: 0;
@@ -377,9 +382,6 @@ form {
           button.btn-4 {
             max-width: 100%;
           }
-        }
-        .rc-anchor-dark {
-          background: var(--color-page-background) !important;
         }
       }
     }

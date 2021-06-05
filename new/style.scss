@@ -128,16 +128,17 @@ h6 {
 }
 
 form {
-  border:1px solid #ffffff25;
-  padding: 80px 80px 140px;
+  border: 1px solid #ffffff25;
   border-radius: 8px;
+  background: var(--color-black-alt);
+  padding: 80px 80px 140px;
   margin: 7em 0;
   position: relative;
   h2 {
     color: var(--color-text);
     font-weight: 600;
   }
-  input, label, textarea, select {
+  input[type="email"], input[type="text"], label, textarea, select {
     width: 100%;
     max-width: 100%;
     min-height: 48px;
@@ -147,7 +148,7 @@ form {
     color: var(--color-text);
   }
   
-  input, textarea, select {
+  input[type="email"], input[type="text"], textarea, select {
     background: none;
     border: 1px solid var(--color-text);
     padding: 16px;
@@ -155,12 +156,124 @@ form {
     line-height: 1.5em;
   }
 
-  input, textarea {
+  input[type="email"], input[type="text"], textarea {
     &:focus {
       border-color: #ff5722;
       outline: none;
     }
   }
+
+      /* Custom labels: the container */
+      .checkcontainer {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        -webkit-user-select: none; /* Chrome, Opera, Safari */
+        -moz-user-select: none; /* Firefox 2+ */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Standard syntax */
+        border: 1px solid #fff;
+        border-radius: 4px;
+        margin-bottom: 1em;
+        padding: .75em 3.5em;
+      }
+  
+      /* Hide the browser's default checkbox */
+      .checkcontainer input {
+        position: absolute;
+        opacity: 0;
+      cursor: pointer;}
+  
+      /* Create a custom checkbox */
+      .checkmark {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+      }
+  
+      /* On mouse-over, add a grey background color */
+      .checkcontainer:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+  
+      /* When the checkbox is checked, add a blue background */
+      .checkcontainer input:checked ~ .checkmark {
+        background-color: #ff5722;
+        border-radius: 50%;
+      }
+  
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+  
+      /* Show the checkmark when checked */
+      .checkcontainer input:checked ~ .checkmark:after {
+        display: block;
+      }
+  
+      /* Style the checkmark/indicator */
+      .checkcontainer .checkmark:after {
+        left: 7px;
+        top: 3px;
+        width: 7px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+  
+      /* Create a custom radio button */
+      .radiobtn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+      }
+  
+      /* On mouse-over, add a grey background color */
+      .checkcontainer:hover input ~ .radiobtn{
+        background-color: #ccc;
+      }
+  
+      /* When the radio button is checked, add a blue background */
+      .checkcontainer input:checked ~ .radiobtn{
+        background-color: #2196F3;
+      }
+  
+      /* Create the indicator (the dot/circle - hidden when not checked) */
+      .radiobtn:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+  
+      /* Show the indicator (dot/circle) when checked */
+      .checkcontainer input:checked ~ .radiobtn:after {
+        display: block;
+      }
+  
+      /* Style the indicator (dot/circle) */
+      .checkcontainer .radiobtn:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
 
   select option:checked {       
     background: #ff5722;
@@ -214,6 +327,9 @@ form {
   max-width: 100%;
   margin: 0px auto;
   grid-gap: 0 4em;
+  &.three {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   @media (max-width: 1400px) {
     min-height: auto;
     padding: 0 0 0;
@@ -472,7 +588,7 @@ img {
     }
   }
   .g-row {
-    grid-gap: 0 2em;
+    grid-gap: 0 1em;
     padding: 0px;
   }
 } 
@@ -516,6 +632,7 @@ img {
 .light {
   --color-page-background: #{$color-black};
   --color-text: #{$color-white};
+
   --color-gray-light: #{$color-gray-dark};
   --color-gray-dark: #{$color-gray-light};
 }
@@ -523,8 +640,16 @@ img {
 .dark {
   --color-page-background: #{$color-white};
   --color-text: #{$color-black};
+  --color-black-alt: #{$color-white};
   --color-gray-light: #{$color-gray-light};
   --color-gray-dark: #{$color-gray-dark};
+  form {
+    border-color: #00000050;
+    background: #00000010;
+    footer.form-footer{
+      border-color: #00000050;;
+    }
+  }
 }
 
 @keyframes mymove {

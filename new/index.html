@@ -524,11 +524,12 @@
     </section>
     <section class="content-container">
       <form name="contact" method="POST" data-netlify="true">
-        <h2>Now, about your project...</h2>
+        <h2>Now, about <span class="hl">your project...</span></h2>
+        <p>I like being on a first-name basis, but it also helps me get in touch with
+          you.</p>
         <div class="g-row" style="grid-template-columns: 2fr 1fr; grid-gap: 0 4em">
           <div class="g-column">
-            <p style="margin-bottom: 0px;">I like being on a first-name basis, but it also helps me get in touch with
-              you.</p>
+
             <div class="g-row">
               <p class="g-column">
                 <label>What is your full name?<input type="text" name="name" placeholder="John Smith" /></label>
@@ -539,34 +540,47 @@
               </p>
             </div>
             <p>
-              <label>What sort of work do you need help with? You can read about our services <a
-                  href="#">here</a>.<select name="role[]" multiple>
-                  <option value="Web Design">Web Design</option>
-                  <option value="Web Development">Web Development</option>
-                  <option value="Consultation">Consultation</option>
-                </select>
+              <label>What sort of work do you need help with? You can read about my services <a href="#"
+                  class="hl">here</a>.
               </label>
             </p>
+            <div class="g-row">
+              <label class="checkcontainer">Web Development
+                <input type="checkbox" id="webDev" name="Web-Development" value="Web Development">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkcontainer">Web Design
+                <input type="checkbox" id="webDesign" name="Web-Design" value="Web Design">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkcontainer">Consultation
+                <input type="checkbox" id="consultation" name="consultation" value="Consultation">
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkcontainer">Other
+                <input type="checkbox" id="other" name="other" value="Other">
+                <span class="checkmark"></span>
+              </label>
+            </div>
           </div>
           <div class="g-column">
-            <p>Tell me what you need help with, the purpose of the project and problems I'll be solving.</p>
             <p>
               <label>What is your project all about?<textarea
                   placeholder="Hey Tim, I'd love to talk to you about a web development project we're working on..."
                   name="message"></textarea></label>
             </p>
+            <p>Tell me what you need help with, the purpose of the project and problems I'll be solving.</p>
             <div data-netlify-recaptcha="true"></div>
           </div>
         </div>
 
         <footer class="form-footer">
           <p>
-            3/6 Questions Remaining
+            2/4 Questions Remaining
           </p>
           <p>
             <button class="btn btn-4" type="submit">Send Message</button>
           </p>
-
         </footer>
       </form>
     </section>

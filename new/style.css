@@ -2857,6 +2857,10 @@ form input[type="email"]:focus, form input[type="text"]:focus, form textarea:foc
   outline: none;
 }
 
+form textarea {
+  min-height: 9.5em;
+}
+
 @media (max-width: 768px) {
   form textarea {
     min-height: 12em;
@@ -3048,8 +3052,8 @@ form footer.form-footer p:first-of-type {
 }
 
 .grid.grid-2-1, .g-row.grid-2-1 {
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   grid-gap: 0 4em;
 }
 
@@ -3247,8 +3251,8 @@ img {
 }
 
 .content-container .grid.grid-2-1, .content-container .g-row.grid-2-1 {
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   grid-gap: 0 4em;
 }
 

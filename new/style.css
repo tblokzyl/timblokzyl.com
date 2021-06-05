@@ -3040,6 +3040,13 @@ form footer.form-footer .form-footer-container {
           flex-grow: 1;
 }
 
+@media (max-width: 768px) {
+  form footer.form-footer .form-footer-container {
+    padding: 0 20px;
+    margin-left: 20px;
+  }
+}
+
 form footer.form-footer .form-footer-container div.progress-remaining {
   margin-right: auto;
   display: -webkit-box;
@@ -3062,11 +3069,27 @@ form footer.form-footer .form-footer-container div.progress-bar-container {
   display: flex;
 }
 
+@media (max-width: 768px) {
+  form footer.form-footer .form-footer-container div.progress-bar-container {
+    display: none;
+  }
+}
+
 form footer.form-footer .form-footer-container div.progress-bar-button {
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  form footer.form-footer .form-footer-container div.progress-bar-button {
+    width: 100%;
+    margin-right: auto;
+  }
+  form footer.form-footer .form-footer-container div.progress-bar-button button.btn-4 {
+    max-width: 100%;
+  }
 }
 
 .hl {

@@ -342,6 +342,10 @@ form {
       align-items: center;
       justify-content: space-evenly;
       flex-grow: 1;
+      @media(max-width: $small) {
+        padding: 0 20px;
+        margin-left: 20px;
+      }
       div.progress-remaining {
         margin-right: auto;
         display: flex;
@@ -354,10 +358,20 @@ form {
         margin: 0 auto;
         height: .4em;
         display: flex;
+        @media(max-width: $small) {
+          display: none;
+        }
       }
       div.progress-bar-button {
         margin-left: auto;
         display: flex;
+        @media(max-width: $small) {
+          width: 100%;
+          margin-right: auto;
+          button.btn-4 {
+            max-width: 100%;
+          }
+        }
       }
     }
   }

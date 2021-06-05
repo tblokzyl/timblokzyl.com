@@ -2996,6 +2996,10 @@ form footer.form-footer button {
   form footer.form-footer button {
     right: 20px;
   }
+  form footer.form-footer button.btn-4 {
+    max-width: calc(100% - 40px);
+    width: 100%;
+  }
 }
 
 form footer.form-footer p:first-of-type {
@@ -3013,7 +3017,7 @@ form footer.form-footer p:first-of-type {
 
 @media (max-width: 768px) {
   form footer.form-footer p:first-of-type {
-    left: 20px;
+    display: none;
   }
 }
 

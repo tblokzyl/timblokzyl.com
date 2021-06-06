@@ -532,11 +532,12 @@
               you.</p>
             <div class="g-row">
               <p class="g-column">
-                <label>What is your full name?<input type="text" name="name" placeholder="John Smith" /></label>
+                <label>What is your full name?<input type="text" name="name" placeholder="John Smith"
+                    required /></label>
               </p>
               <p class="g-column">
-                <label>What is your email address?<input type="email" name="email"
-                    placeholder="johnsmith@example.com" /></label>
+                <label>What is your email address?<input type="email" name="email" placeholder="johnsmith@example.com"
+                    required /></label>
               </p>
             </div>
             <p>
@@ -546,19 +547,19 @@
             </p>
             <div class="g-row">
               <label class="checkcontainer">Web Development
-                <input type="checkbox" id="webDev" name="Web-Development" value="Web Development">
+                <input type="checkbox" id="webDev" name="serviceType" value="Web Development">
                 <span class="checkmark"></span>
               </label>
               <label class="checkcontainer">Web Design
-                <input type="checkbox" id="webDesign" name="Web-Design" value="Web Design">
+                <input type="checkbox" id="webDesign" name="serviceType" value="Web Design">
                 <span class="checkmark"></span>
               </label>
               <label class="checkcontainer">Consultation
-                <input type="checkbox" id="consultation" name="consultation" value="Consultation">
+                <input type="checkbox" id="consultation" name="serviceType" value="Consultation">
                 <span class="checkmark"></span>
               </label>
               <label class="checkcontainer">Other
-                <input type="checkbox" id="other" name="other" value="Other">
+                <input type="checkbox" id="other" name="serviceType" value="Other">
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -566,9 +567,9 @@
           <div class="g-column">
             <p>Tell me what you need help with, the purpose of the project and problems I'll be solving.</p>
             <p>
-              <label>What is your project all about?<textarea
+              <label>What is your project all about?<textarea name="message"
                   placeholder="Hey Tim, I'd love to talk to you about a web development project we're working on..."
-                  name="message"></textarea></label>
+                  name="message" required></textarea></label>
             </p>
             <p>
             <div data-theme="dark" data-netlify-recaptcha="true"></div>

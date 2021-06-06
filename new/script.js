@@ -1,11 +1,92 @@
 /**
  * Header
  */
+ const inputs = document.querySelectorAll('input[type="email"], input[type="text"], textarea');
+ const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+ const progressBar = document.querySelector('.progress-bar-container progress');
+
+ inputs.forEach(function(input) {
+	input.addEventListener("keyup", handleFormValidation);
+	console.log('sup')
+ });
+
+ checkboxes.forEach(function(input) {
+	 if(input.type == "checkbox" && input.value) {
+		input.addEventListener("click", handleFormValidation);
+	 }
+	 else {
+		input.addEventListener("keyup", handleFormValidation);
+	 }
+
+ });
+
+function handleFormValidation() {
+	let emptyCheckboxes = checkboxes.length;
+	let fieldsCompleted = 0;
+	inputs.forEach(function(input) {
+		if(input.type == "email" && input.value) {
+		fieldsCompleted++;
+		}
+		else if (input.type == "email" && !input.value){
+		console.log("email empty")
+		}
+		if(input.type == "text" && input.value) {
+		fieldsCompleted++;
+		}
+		else if (input.type == "text" && !input.value) {
+		console.log("text empty")
+		}
+		if(input.name == "message" && input.value) {
+		fieldsCompleted++;
+		}
+		else if (input.name == "message" && !input.value) {
+		console.log("textarea empty")
+		}
+	});
+
+	for (let i = 0; i < checkboxes.length; i++) {
+		if(checkboxes[i].type == "checkbox" && checkboxes[i].checked) {
+			fieldsCompleted++;
+			break;
+		}
+		else {
+			emptyCheckboxes--;
+		}
+	}
+
+	if(emptyCheckboxes == 0)
+	console.log("checkboxes empty")
+
+	console.log(progressBar);
+	console.log(fieldsCompleted);
+
+	if (fieldsCompleted !== 0) {
+		progressBar.setAttribute('value', fieldsCompleted * 25);
+	}
+	else {
+		progressBar.setAttribute('value', 0);
+	}
+}
 
  document.addEventListener('DOMContentLoaded', (event) => {
+
+
     const recaptcha = document.querySelector('.g-recaptcha');
     recaptcha.setAttribute("data-theme", "dark");
+
   });
+
+
+
+
+  /*const allInputs = input.length;
+  let touchedInput = 0;
+  
+  for (let i = 0; i < allInputs; i++) {
+    if ((input[i].value)) {
+      touchedInput++;
+    }
+  }*/
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;

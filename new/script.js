@@ -7,6 +7,7 @@
  const inputs = document.querySelectorAll('input[type="email"], input[type="text"], textarea');
  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
  const progressBar = document.querySelector('.progress-bar-container progress');
+ const fieldsCompletedContainer = document.querySelector('.progress-remaining .fields-completed');
  let allInputs = [...inputs, ...checkboxes];
  console.log(allInputs);
 
@@ -51,6 +52,7 @@ function handleFormValidation() {
 	else {
 		progressBar.setAttribute('value', 0);
 	}
+	fieldsCompletedContainer.innerText = fieldsCompleted + "/4";
 }
 
 handleFormValidation();

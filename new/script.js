@@ -1,24 +1,24 @@
 /**
  * Header
  */
+
+
+// Contact Form Validation //
  const inputs = document.querySelectorAll('input[type="email"], input[type="text"], textarea');
  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
  const progressBar = document.querySelector('.progress-bar-container progress');
+ let allInputs = [...inputs, ...checkboxes];
+ console.log(allInputs);
 
- inputs.forEach(function(input) {
-	input.addEventListener("keyup", handleFormValidation);
-	console.log('sup')
- });
-
- checkboxes.forEach(function(input) {
+ allInputs.forEach(function(input) {
 	 if(input.type == "checkbox" && input.value) {
 		input.addEventListener("click", handleFormValidation);
 	 }
 	 else {
 		input.addEventListener("keyup", handleFormValidation);
 	 }
-
  });
+
 
 function handleFormValidation() {
 	let emptyCheckboxes = checkboxes.length;
@@ -27,20 +27,11 @@ function handleFormValidation() {
 		if(input.type == "email" && input.value) {
 		fieldsCompleted++;
 		}
-		else if (input.type == "email" && !input.value){
-		console.log("email empty")
-		}
 		if(input.type == "text" && input.value) {
 		fieldsCompleted++;
 		}
-		else if (input.type == "text" && !input.value) {
-		console.log("text empty")
-		}
 		if(input.name == "message" && input.value) {
 		fieldsCompleted++;
-		}
-		else if (input.name == "message" && !input.value) {
-		console.log("textarea empty")
 		}
 	});
 
@@ -54,12 +45,6 @@ function handleFormValidation() {
 		}
 	}
 
-	if(emptyCheckboxes == 0)
-	console.log("checkboxes empty")
-
-	console.log(progressBar);
-	console.log(fieldsCompleted);
-
 	if (fieldsCompleted !== 0) {
 		progressBar.setAttribute('value', fieldsCompleted * 25);
 	}
@@ -67,6 +52,10 @@ function handleFormValidation() {
 		progressBar.setAttribute('value', 0);
 	}
 }
+
+handleFormValidation();
+
+// Contact Form Validation End //
 
  document.addEventListener('DOMContentLoaded', (event) => {
 

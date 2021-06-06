@@ -360,6 +360,7 @@ form {
       div.progress-remaining {
         margin-right: auto;
         display: flex;
+        min-width: 180px;
         @media(max-width: $medium) {
           display: none;
         }
@@ -532,17 +533,22 @@ progress {
   border: none;
   border-radius: 16px;
 }
-progress::-webkit-progress-bar {
-  background-color: yellow;
-}
-progress::-webkit-progress-value {
-  background-color: #ff5722;
-  border-radius: 16px;
-}
-progress::-moz-progress-bar {
-  /* style rules */
-  background-color: #ff5722;
-  border-radius: 16px;
+progress {
+
+  &[value]::-webkit-progress-bar,
+  &[value]::-webkit-progress-value,
+  &[value]::-moz-progress-bar {
+    background-color: #ff5722;
+    border-radius: 16px;
+    transition: width 0.5s ease-in-out;
+  }
+  /*&.success {
+    &[value]::-webkit-progress-bar,
+    &[value]::-webkit-progress-value,
+    &[value]::-moz-progress-bar {
+      background-color: #2259ff;
+    }
+  }*/
 }
 
 @media (max-width: $small) {

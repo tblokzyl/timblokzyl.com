@@ -3063,6 +3063,7 @@ form footer.form-footer .form-footer-container div.progress-remaining {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 180px;
 }
 
 @media (max-width: 1024px) {
@@ -3296,19 +3297,21 @@ progress {
   border-radius: 16px;
 }
 
-progress::-webkit-progress-bar {
-  background-color: yellow;
+progress {
+  /*&.success {
+    &[value]::-webkit-progress-bar,
+    &[value]::-webkit-progress-value,
+    &[value]::-moz-progress-bar {
+      background-color: #2259ff;
+    }
+  }*/
 }
 
-progress::-webkit-progress-value {
+progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value, progress[value]::-moz-progress-bar {
   background-color: #ff5722;
   border-radius: 16px;
-}
-
-progress::-moz-progress-bar {
-  /* style rules */
-  background-color: #ff5722;
-  border-radius: 16px;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 @media (max-width: 768px) {

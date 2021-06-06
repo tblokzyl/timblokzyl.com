@@ -52,7 +52,15 @@ function handleFormValidation() {
 	else {
 		progressBar.setAttribute('value', 0);
 	}
-	fieldsCompletedContainer.innerText = fieldsCompleted + "/4";
+	if(fieldsCompleted == 4){
+		fieldsCompletedContainer.innerText = "Questions Complete!";
+		progressBar.classList.add("success");
+	}
+	else {
+		fieldsCompletedContainer.innerText = 4 - fieldsCompleted + "/4 Questions Remaining";
+		progressBar.classList.remove("success");
+	}
+	
 }
 
 handleFormValidation();

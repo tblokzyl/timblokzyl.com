@@ -326,10 +326,10 @@ form {
     button {
       @media(max-width: $medium) {
         &.btn-4 {
-          max-width: calc(100% - 40px);
+          max-width: 100%;
           width: 100%; 
+          margin-right: 0px;
         }
-        right: 20px;
       }
       margin: 0px;
       padding-left: 1em;
@@ -359,7 +359,7 @@ form {
       flex-grow: 1;
       @media(max-width: $medium) {
         padding: 0 20px;
-        margin-left: 20px;
+        margin-left: 0px;
       }
       div.progress-remaining {
         margin-right: auto;
@@ -766,6 +766,9 @@ progress {
   }
   form {
     border: 1px solid #00000025 !important;
+    footer.form-footer {
+      border-top: 1px solid #00000025 !important;
+    }
   }
   input[type="email"], input[type="text"], textarea, select {
     border: 1px solid #00000025;

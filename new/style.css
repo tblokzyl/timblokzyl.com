@@ -3018,12 +3018,10 @@ form footer.form-footer button {
 }
 
 @media (max-width: 1024px) {
-  form footer.form-footer button {
-    right: 20px;
-  }
   form footer.form-footer button.btn-4 {
-    max-width: calc(100% - 40px);
+    max-width: 100%;
     width: 100%;
+    margin-right: 0px;
   }
 }
 
@@ -3058,7 +3056,7 @@ form footer.form-footer .form-footer-container {
 @media (max-width: 1024px) {
   form footer.form-footer .form-footer-container {
     padding: 0 20px;
-    margin-left: 20px;
+    margin-left: 0px;
   }
 }
 
@@ -3589,6 +3587,10 @@ progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value, 
 
 .dark form {
   border: 1px solid #00000025 !important;
+}
+
+.dark form footer.form-footer {
+  border-top: 1px solid #00000025 !important;
 }
 
 .dark input[type="email"], .dark input[type="text"], .dark textarea, .dark select {

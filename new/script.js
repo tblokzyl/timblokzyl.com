@@ -11,14 +11,16 @@
  let allInputs = [...inputs, ...checkboxes];
  console.log(allInputs);
 
- allInputs.forEach(function(input) {
-	 if(input.type == "checkbox" && input.value) {
-		input.addEventListener("click", handleFormValidation);
-	 }
-	 else {
-		input.addEventListener("keyup", handleFormValidation);
-	 }
- });
+ if(progressBar) {
+	allInputs.forEach(function(input) {
+		if(input.type == "checkbox" && input.value) {
+			input.addEventListener("click", handleFormValidation);
+		}
+		else {
+			input.addEventListener("keyup", handleFormValidation);
+		}
+	});
+}
 
 
 function handleFormValidation() {
@@ -46,6 +48,7 @@ function handleFormValidation() {
 		}
 	}
 
+
 	if (fieldsCompleted !== 0) {
 		progressBar.setAttribute('value', fieldsCompleted * 25);
 	}
@@ -62,8 +65,9 @@ function handleFormValidation() {
 	}
 	
 }
-
+if(progressBar) {
 handleFormValidation();
+}
 
 // Contact Form Validation End //
 

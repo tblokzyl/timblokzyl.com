@@ -747,7 +747,6 @@ progress {
 .light {
   --color-page-background: #{$color-black};
   --color-text: #{$color-white};
-
   --color-gray-light: #{$color-gray-dark};
   --color-gray-dark: #{$color-gray-light};
 }
@@ -764,6 +763,15 @@ progress {
     footer.form-footer{
       border-color: #00000050;;
     }
+  }
+  form {
+    border: 1px solid #00000025 !important;
+  }
+  input[type="email"], input[type="text"], textarea, select {
+    border: 1px solid #00000025;
+  }
+  .checkcontainer {
+    border: 1px solid #00000025;
   }
 }
 

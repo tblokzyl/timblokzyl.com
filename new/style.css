@@ -3587,6 +3587,18 @@ progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value, 
   border-color: #00000050;
 }
 
+.dark form {
+  border: 1px solid #00000025 !important;
+}
+
+.dark input[type="email"], .dark input[type="text"], .dark textarea, .dark select {
+  border: 1px solid #00000025;
+}
+
+.dark .checkcontainer {
+  border: 1px solid #00000025;
+}
+
 @-webkit-keyframes mymove {
   0% {
     -webkit-transform: scale(0.825);

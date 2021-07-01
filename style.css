@@ -2799,6 +2799,50 @@ h6 {
   font-size: 1em;
 }
 
+.modal-container {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100 - 100px);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal {
+  background-color: var(--color-black-alt);
+  color: var(--color-text);
+  max-width: 100%;
+  width: 400px;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal img {
+  margin: 0 auto;
+  display: block;
+}
+
+.modal h3 {
+  margin: 0em 0 1em;
+}
+
+.modal p {
+  max-width: 300px;
+  margin: 0 auto 2em;
+  line-height: 1.5em;
+}
+
+.modal a {
+  margin: 1em auto 0 !important;
+  display: block;
+}
+
 form {
   border: 1px solid #ffffff25;
   border-radius: 8px;
@@ -3521,6 +3565,21 @@ progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value, 
 .content-container .g-row {
   grid-gap: 0 1em;
   padding: 0px;
+}
+
+.content-container a {
+  margin: .5em 0 0em 0;
+  line-height: 50px;
+  display: block;
+  font-size: 1.25em;
+}
+
+@media (max-width: 768px) {
+  .content-container a {
+    font-size: 1em;
+    line-height: 45px;
+    max-width: 160px;
+  }
 }
 
 @media (min-width: 1540px) {

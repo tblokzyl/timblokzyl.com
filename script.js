@@ -110,43 +110,41 @@ window.addEventListener('resize', () => {
 
 var count = 0;
 
- function toggleDarkMode() {
+ function toggleDarkMode(button) {
 	document.body.classList.toggle("dark");
 	document.body.classList.toggle("light");
+    button.querySelector('i').classList.toggle("fa-moon");
+    button.querySelector('i').classList.toggle("fa-sun");
  }
 
 function handleDarkMode() {
 	const button = document.querySelector('.item-dark-mode');
+    let buttonText = button.querySelector('span');
 	let userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 	let userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 	if(userPrefersDark && document.body.classList.contains("light") && count > 0){
-		toggleDarkMode();
-		button.innerText = "Dark Mode";
-		console.log('swag');
+		toggleDarkMode(button);
+		buttonText.innerText = "Dark Mode";
 	}
 	else if(userPrefersLight && document.body.classList.contains("dark") && count > 0 ){ 
-		toggleDarkMode();
-		button.innerText = "Light Mode";
-		console.log("hello");
+		toggleDarkMode(button);
+		buttonText.innerText = "Light Mode";
 	}
 	else if (userPrefersDark && document.body.classList.contains("light") ) {
-		button.innerText = "Light Mode";
-		console.log('hey');
+		buttonText.innerText = "Light Mode";
 	}
 	else if (userPrefersLight && document.body.classList.contains("light")) {
-		button.innerText = "Dark Mode";
-        toggleDarkMode();
+		buttonText.innerText = "Dark Mode";
+        toggleDarkMode(button);
 	}
 	else {
 		if(document.body.classList.contains("dark")) {
-			toggleDarkMode();
-			button.innerText = "Light Mode";
-			console.log('yo');
+			buttonText.innerText = "Light Mode";
 		} 
 		else {
-			toggleDarkMode();
-			button.innerText = "Dark Mode";
+			buttonText.innerText = "Dark Mode";
 		}
+        toggleDarkMode(button);
 	}
 	count++; 
  }

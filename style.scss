@@ -764,6 +764,11 @@ progress {
       max-width: 160px;
     }
   }
+  form label a {
+    line-height: normal;
+    display: inline;
+    font-size: 1em;
+  }
 }
     
 .container { 

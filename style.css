@@ -3582,6 +3582,12 @@ progress[value]::-webkit-progress-bar, progress[value]::-webkit-progress-value, 
   }
 }
 
+.content-container form label a {
+  line-height: normal;
+  display: inline;
+  font-size: 1em;
+}
+
 @media (min-width: 1540px) {
   .container.hero {
     padding-top: 5em;
